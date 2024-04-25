@@ -1,0 +1,79 @@
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  font-family: NimbusSans;
+  font-size: small;
+  backdrop-filter: blur(10px);
+  /* background-color: rgba(104, 104, 104, 0.068); */
+  height: 4rem;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: url('/cursor.png'), auto;
+}
+
+.active {
+  font-style: italic;
+}
+
+.logo {
+  width: 200px;
+}
+
+.hover-text {
+  display: none;
+  position: absolute;
+  left: 74%;
+  transform: translateX(-50%);
+  top: 62%;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5rem;
+  gap: .5rem;
+}
+
+#contact.active .hover-text {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  /* background-color: rgba(104, 104, 104, 0.068); */
+}
+
+.hover-text-about {
+  position: absolute;
+  left: 30%;
+  top: 62%;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.container-text-about {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  /* background-color: rgba(104, 104, 104, 0.068); */
+} 
+
+#about.active .hover-text-about {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+

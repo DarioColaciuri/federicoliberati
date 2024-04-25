@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Federico Liberati">
+	<div class="img-container">
+		<a href="/main">
+			<Image class='logo' src="/logoindex.png" alt="Federico-Liberati logo" width={160} height={160} />
+		</a>
+	</div>
+</Layout>
+
+<style>
+		.img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	@keyframes rotatecenter {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .logo {
+	animation: rotatecenter 20s linear infinite both;
+}
+</style>

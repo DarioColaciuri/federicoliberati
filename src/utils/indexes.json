@@ -1,0 +1,135 @@
+[
+    {
+        "year": "2023-",
+        "index": "0058",
+        "title": "ABRAX",
+        "type": "housing",
+        "status": "ongoing"
+    },
+    {
+        "year": "2023",
+        "index": "0057",
+        "title": "CEREZO",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2021-2023",
+        "index": "0051",
+        "title": "CARACOL",
+        "type": "housing",
+        "status": "built"
+    },
+    {
+        "year": "2021",
+        "index": "0043",
+        "title": "D903",
+        "type": "commercial",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2021",
+        "index": "0038",
+        "title": "NUNA",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2020",
+        "index": "0032",
+        "title": "CERRITO",
+        "type": "office",
+        "status": "built"
+    },
+    {
+        "year": "2020-2021",
+        "index": "0027",
+        "title": "CRUASÁN",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2020",
+        "index": "0026",
+        "title": "NATURALLY",
+        "type": "commercial",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2020",
+        "index": "0025",
+        "title": "POMODORO",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2020",
+        "index": "0024",
+        "title": "PARRACA",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2020",
+        "index": "0023",
+        "title": "SOMA",
+        "type": "commercial",
+        "status": "built"
+    },
+    {
+        "year": "2019",
+        "index": "0020",
+        "title": "MONTEVIDEO",
+        "type": "commercial",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2019",
+        "index": "0018",
+        "title": "CDE",
+        "type": "furniture",
+        "status": "built"
+    },
+    {
+        "year": "2019",
+        "index": "0015",
+        "title": "AYACUCHO",
+        "type": "refurbisment",
+        "status": "built"
+    },
+    {
+        "year": "2018",
+        "index": "0010",
+        "title": "LIBERTADOR",
+        "type": "furniture",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2018",
+        "index": "0008",
+        "title": "COE",
+        "type": "office",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2017",
+        "index": "0006",
+        "title": "SEGUÍ",
+        "type": "refurbisment",
+        "status": "built"
+    },
+    {
+        "year": "2017",
+        "index": "0005",
+        "title": "67",
+        "type": "refurbisment",
+        "status": "unbuilt"
+    },
+    {
+        "year": "2017",
+        "index": "0002",
+        "title": "TEHE",
+        "type": "commercial",
+        "status": "built"
+    }
+]

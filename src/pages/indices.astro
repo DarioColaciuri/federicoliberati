@@ -1,0 +1,52 @@
+---
+import NavFoot from '../layouts/NavFoot.astro';
+import indexes from '../utils/indexes.json';
+---
+
+<NavFoot title="Federico-Liberati">
+<div class="index">
+    {indexes.map((index) => (
+        <div class="project">
+            <div class="container">
+                <h1>{index.year}</h1>
+            </div>
+            <div class="container">
+                <h1>{index.index}</h1>
+            </div>
+            <div class="container">
+                <h1>{index.title}</h1>
+            </div>
+            <div class="container">
+                <h1>{index.type}</h1>
+            </div>
+            <div class="container">
+                <h1>{index.status}</h1>
+            </div>
+        </div>
+        <hr/>
+    ))}
+</div>
+</NavFoot>
+
+
+<style>
+    .index {
+        line-height: .4rem;
+        font-family: NimbusSans;
+    }
+
+    .project {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: .4rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+        width: 20rem;
+        padding-left: 9rem;
+    }
+</style>

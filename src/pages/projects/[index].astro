@@ -1,0 +1,163 @@
+---
+import projects from "../../utils/projects.json";
+import NavFoot from "../../layouts/NavFoot.astro";
+import Carousel from "../../components/Carousel.astro";
+
+const { index } = Astro.params;
+
+let project = null;
+if (index) {
+  project = projects.find((project) => project.index === index);
+}
+
+export function getStaticPaths() {
+  const paths = projects.map((project) => ({
+    params: { index: project.index.toString() }
+  }));
+  
+  return paths;
+}
+
+---
+
+<NavFoot title="Federico-Liberati">
+  <div class="project-container">
+
+    <Carousel transition:persist project={project} />
+
+      {project.title && <h1 class="titulo">{project.title}</h1>}
+    </div>
+
+    <div class="info-container">
+      <div class="info">
+        {project.year && 
+          <div class="container">
+            <p class="italic">year:</p>
+            <span class="normal">{project.year}</span>
+          </div>
+        }
+        <br />
+        
+        {project.type && 
+          <div class="container">
+            <p class="italic">type:</p>
+            <span class="normal">{project.type}</span>
+          </div>
+        }
+        {project.program && 
+          <div class="container">
+            <p class="italic">program:</p>
+            <span class="normal">{project.program}</span>
+          </div>
+        }
+        {project.materials && 
+          <div class="container">
+            <p class="italic">materials:</p>
+            <span class="normal">{project.materials}</span>
+          </div>
+        }
+        {project.client && 
+          <div class="container">
+            <p class="italic">client:</p>
+            <span class="normal">{project.client}</span>
+          </div>
+        }
+        <br />
+        
+        {project.location && 
+          <div class="container">
+            <p class="italic">location:</p>
+            <span class="normal">{project.location}</span>
+          </div>
+        }
+        {project.status && 
+          <div class="container">
+            <p class="italic">status:</p>
+            <span class="normal">{project.status}</span>
+          </div>
+        }
+        {project.construction && 
+          <div class="container">
+            <p class="italic">construction:</p>
+            <span class="normal">{project.construction}</span>
+          </div>
+        }
+        {project.team && 
+          <div class="container">
+            <p class="italic">team:</p>
+            <span class="normal">{project.team}</span>
+          </div>
+        }
+        {project.association && 
+          <div class="container">
+            <p class="italic">association:</p>
+            <span class="normal">{project.association}</span>
+          </div>
+        }
+        {project.constructiondesign && 
+          <div class="container">
+            <p class="italic">construction design:</p>
+            <span class="normal">{project.constructiondesign}</span>
+          </div>
+        }
+        {project.related && 
+          <div class="container">
+            <p class="italic">related:</p>
+            <span class="normal">{project.related}</span>
+          </div>
+        }
+      </div>
+      <div class="description">
+        {project.description && <p>{project.description}</p>}
+      </div>
+    </div>
+  </div>
+</NavFoot>
+
+
+  <style>
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-container {
+      display: flex;
+      align-items: center;
+      font-family: Freight;
+      justify-content: space-around;
+
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      line-height: .4rem;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .normal {
+      font-style: normal;
+    }
+
+    .description {
+      width: 500px;
+    }
+
+    .titulo {
+      font-family: NimbusSans;
+    }
+
+  </style>
+

@@ -1,0 +1,58 @@
+---
+import NavFoot from "../layouts/NavFoot.astro";
+---
+
+<NavFoot title="Federico-Liberati">
+  <div class="container-gral">
+    <div class="container">
+      <img src="/about.jpg" alt="federico liberati" />
+      <div class="container-texto">
+        <p class="text1">
+          I’m an Argentinian architect based in Buenos Aires & Barcelona. I’ve
+          started my solo practice in 2017, having worked in association with
+          other professionals throughout the years. I specialize on commercial &
+          gastronomic architecture aswell on private housing & refurbishments.
+          Each project is developed with site specific solutions and bespoke
+          furniture & objects, intending to portray a unique vision for each of
+          them.
+        </p>
+        <p class="text2">
+          I was born in 1992 and obtained my Double Degree as an architect, with
+          Honor Diploma, at Universidad de Belgrano (AR) & Politecnico di Torino
+          (IT) in 2016. In 2022 I received a Master’s Degree on BIM Management
+          from the Polythecnic University of Catalunya (ES).
+        </p>
+        <p class="text3">
+          I have also worked as a teacher and researcher at Universidad de
+          Belgrano (2013-2021).
+        </p>
+      </div>
+    </div>
+  </div>
+</NavFoot>
+
+<style>
+  .container-gral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .container-texto {
+    width: 30vw;
+  }
+
+  .text1 {
+    font-family: NimbusSans;
+  }
+
+  .text2, .text3 {
+    font-family: Freight;
+  }
+</style>
