@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <header>
+
       <nav>
         <a
           id="projects"
@@ -93,7 +93,6 @@ const NavBar = () => {
           )}
         </a>
       </nav>
-    </header>
   );
 };
 
