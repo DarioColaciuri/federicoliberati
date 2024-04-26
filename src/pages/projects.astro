@@ -4,7 +4,8 @@ import projects from "../utils/projects.json"
 ---
 
 <NavFoot title="Federico-Liberati">
-    <main class="columns">
+    <main class="container">
+    <div class="columns">
         <div class="column">
             {projects.map((project, index) => (
                 index % 2 === 0 && (
@@ -41,7 +42,8 @@ import projects from "../utils/projects.json"
                 )
             ))}
         </div>
-    </main>
+    </div>
+</main>
 </NavFoot>
 
 <style>
@@ -49,8 +51,16 @@ import projects from "../utils/projects.json"
         text-align: center;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .columns {
         display: flex;
+        justify-content: center;
         gap: 1rem;
     }
 
@@ -113,5 +123,20 @@ import projects from "../utils/projects.json"
         color: black;
         font-size: 20px;
         font-family: TimesNow;
+    }
+
+    .textcel {
+        display: none;
+    }
+
+
+
+    @media screen and (max-width: 700px) {
+        .columns {
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            width: 90vw;
+        }
     }
 </style>

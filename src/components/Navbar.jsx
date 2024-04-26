@@ -38,6 +38,11 @@ const NavBar = () => {
             src="/federicoliberati.png"
             alt="federico liberati logo"
           />
+          <img
+            className="logocel"
+            src="/FL.png"
+            alt="federico liberati logo"
+          />
         </a>
         <p
           id="contact"

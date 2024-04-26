@@ -76,4 +76,40 @@ a {
   width: 100px;
 }
 
+.logocel {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+  nav {
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .logocel {
+    display: block;
+    width: 2.2rem;
+  }
+
+  .logo {
+    display: none;
+  }
+  .container-text-about {
+    width: 200px;
+  } 
+
+  .hover-text-about {
+    left: 25%;
+    font-size: .9rem;
+    top: 62%;
+  }
+
+  .hover-text {
+    left: 63%;
+    top: 50%;
+  }
+}
+
 

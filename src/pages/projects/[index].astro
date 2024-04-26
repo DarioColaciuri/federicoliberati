@@ -128,7 +128,7 @@ export function getStaticPaths() {
       align-items: center;
       font-family: Freight;
       justify-content: space-around;
-
+      flex-wrap: wrap;
     }
 
     .container {
@@ -157,6 +157,21 @@ export function getStaticPaths() {
 
     .titulo {
       font-family: NimbusSans;
+    }
+
+    @media screen and (max-width: 700px) {
+      .info-container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      .info {
+        line-height: normal;
+      }
+
+      .description{
+        width: 300px;
+      }
     }
 
   </style>
