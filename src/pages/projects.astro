@@ -4,7 +4,7 @@ import projects from "../utils/projects.json"
 ---
 
 <NavFoot title="Federico-Liberati">
-    <div class="columns">
+    <main class="columns">
         <div class="column">
             {projects.map((project, index) => (
                 index % 2 === 0 && (
@@ -41,7 +41,7 @@ import projects from "../utils/projects.json"
                 )
             ))}
         </div>
-    </div>
+    </main>
 </NavFoot>
 
 <style>
