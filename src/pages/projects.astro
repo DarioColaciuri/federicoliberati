@@ -5,6 +5,16 @@ import projects from "../utils/projects.json"
 
 <NavFoot title="Federico-Liberati">
     <main class="container">
+    <div class="submenu">
+        <ul>
+            <li>
+                <a href="/">All</a>
+                <a href="">ARCHITECTURE</a>
+                <a href="">OBJECTS</a>
+                <a href="">PROCESS</a>
+            </li>
+        </ul>
+    </div>
     <div class="columns">
         <div class="column">
             {projects.map((project, index) => (
@@ -14,7 +24,7 @@ import projects from "../utils/projects.json"
                             <img class="foto" src={`/${project.thumbnail[0]}`} alt={`${project.title}`} />
                             <div class="overlay">
                                 <div class="text-container">
-                                    <h2 class="text">{project.index} “—” {project.title} “—” {project.year}</h2>
+                                    <h2 class="text">{project.index} — {project.title} — {project.year}</h2>
                                     <p class="text2">{project.type}</p>
                                     <p class="text2">{project.status}</p>
                                 </div>
@@ -32,7 +42,7 @@ import projects from "../utils/projects.json"
                             <img class="foto" src={`/${project.thumbnail[0]}`} alt={`${project.title}`} />
                             <div class="overlay">
                                 <div class="text-container">
-                                    <h2 class="text">{project.index} “—” {project.title} “—” {project.year}</h2>
+                                    <h2 class="text">{project.index} — {project.title} — {project.year}</h2>
                                     <p class="text2">{project.type}</p>
                                     <p class="text2">{project.status}</p>
                                 </div>
@@ -75,7 +85,6 @@ import projects from "../utils/projects.json"
         width: 100%;
         height: auto;
         position: relative;
-        border-radius: 1rem;
     }
 
     .image-container {
@@ -105,7 +114,7 @@ import projects from "../utils/projects.json"
         text-align: center;
         padding: 1rem;
         border-radius: 1rem;
-        background-color: rgba(0, 0, 0, 0.055);
+        /* background-color: rgba(0, 0, 0, 0.055); */
         line-height: 1rem;
     }
 
@@ -127,6 +136,15 @@ import projects from "../utils/projects.json"
 
     .textcel {
         display: none;
+    }
+
+    .submenu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .submenu ul {
+        list-style: none;
     }
 
 

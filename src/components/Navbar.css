@@ -5,8 +5,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-family: NimbusSans;
-  font-size: small;
-  backdrop-filter: blur(10px);
+  font-size: normal;
+  /* backdrop-filter: blur(10px); */
   /* background-color: rgba(104, 104, 104, 0.068); */
   height: 4rem;
   z-index: 2;

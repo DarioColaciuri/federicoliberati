@@ -19,14 +19,14 @@ const NavBar = () => {
         >
           projects
         </a>
-        <a
+        {/* <a
           id="indices"
           href="/indices"
           className={activeLink === "indices" ? "active" : ""}
           onClick={() => handleLinkClick("indices")}
         >
           index
-        </a>
+        </a> */}
         <a
           id="main"
           href="/main"
@@ -44,7 +44,7 @@ const NavBar = () => {
             alt="federico liberati logo"
           />
         </a>
-        <p
+        {/* <p
           id="contact"
           className={activeLink === "contact" ? "active" : ""}
           onMouseEnter={() => setActiveLink("contact")}
@@ -66,17 +66,17 @@ const NavBar = () => {
               </div>
             </adress>
           )}
-        </p>
+        </p> */}
         <a
           id="about"
           href="/about"
           className={activeLink === "about" ? "active" : ""}
           onClick={() => handleLinkClick("about")}
-          onMouseEnter={() => setActiveLink("about")}
-          onMouseLeave={() => setActiveLink("")}
+          // onMouseEnter={() => setActiveLink("about")}
+          // onMouseLeave={() => setActiveLink("")}
         >
           about
-          {activeLink === "about" && (
+          {/* {activeLink === "about" && (
             <div className="hover-text-about">
               <div className="container-text-about">
                 <p>
@@ -90,7 +90,7 @@ const NavBar = () => {
                 </p>
               </div>
             </div>
-          )}
+          )} */}
         </a>
       </nav>
   );
