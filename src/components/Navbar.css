@@ -48,12 +48,15 @@ nav a {
   .menu {
     display: flex;
     margin-top: -.5rem;
-    margin-left: .5rem;
   }
 
   nav {
-    justify-content: space-around;
+    justify-content: center;
     font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 300px;
   }
 
   #projects {
