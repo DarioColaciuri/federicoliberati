@@ -62,33 +62,36 @@ import NavBar from "../components/Navbar";
     <title>{title}</title>
     <ViewTransitions />
   </head>
+
   <body>
     <NavBar transition:persist client:visible />
-    <slot />
+      <slot />
     <Footer />
-    <style is:global>
-      body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        cursor: url("/cursor.png"), auto;
-		background-color: white;
-      }
-
-      @font-face {
-        font-family: "TimesNow";
-        src: url("/fonts/TimesNow-SemiLight.woff2.ttf");
-      }
-
-      @font-face {
-        font-family: "NimbusSans";
-        src: url("/fonts/NimbusSans-Regular.otf");
-      }
-
-      @font-face {
-        font-family: "Freight";
-        src: url("/fonts/FreightDispLight.otf");
-      }
-    </style>
   </body>
+  
 </html>
+
+<style is:global>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("/cursor.png"), auto;
+    background-color: white;
+  }
+
+  @font-face {
+    font-family: "TimesNow";
+    src: url("/fonts/TimesNow-SemiLight.woff2.ttf");
+  }
+
+  @font-face {
+    font-family: "NimbusSans";
+    src: url("/fonts/NimbusSans-Regular.otf");
+  }
+
+  @font-face {
+    font-family: "Freight";
+    src: url("/fonts/FreightDispLight.otf");
+  }
+</style>

@@ -4,7 +4,7 @@ const Logo = () => {
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       width="400px"
-      height="835.000000pt"
+      height="70px"
       viewBox="0 0 5001.000000 835.000000"
       preserveAspectRatio="xMidYMid meet"
     >
