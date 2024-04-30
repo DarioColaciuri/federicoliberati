@@ -1,0 +1,23 @@
+[
+    {   
+        "title": "prueba1",
+        "class": "process",
+        "thumbnail": [
+            "08project_pomodoro1.webp"
+        ]
+    },
+    {
+        "title": "prueba2",
+        "class": "process",
+        "thumbnail": [
+            "07project_cde3.webp"
+        ]
+    },
+    {
+        "title": "prueba3",
+        "class": "process",
+        "thumbnail": [
+            "04project_cruasan2.webp"
+        ]
+    }
+]

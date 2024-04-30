@@ -1,0 +1,157 @@
+---
+import NavFoot from "../../layouts/NavFoot.astro"; 
+import SubmenuLayout from "../../layouts/SubmenuLayout.astro";
+import projects from "../../utils/projects.json"
+
+---
+
+<NavFoot title="Federico-Liberati">
+    <main class="container">
+      <SubmenuLayout />
+      <div class="columns">
+        <div class="column">
+          {
+            projects.filter((project, index) => project.class === "architecture" && index % 2 === 0).map(
+              (project, index) => (
+                <a href={`/project/${project.index}`} class="image-link">
+                  <div class="image-container">
+                    <img
+                      class="foto"
+                      src={`/${project.thumbnail[0]}`}
+                      alt={`${project.title}`}
+                    />
+                    <div class="overlay">
+                      <div class="text-container">
+                        <h2 class="text">
+                          {project.index} — {project.title} — {project.year}
+                        </h2>
+                        <p class="text2">{project.type}</p>
+                        <p class="text2">{project.status}</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              )
+            )
+          }
+        </div>
+        <div class="column">
+          {
+            projects.filter((project, index) => project.class === "architecture" && index % 2 !== 0).map(
+              (project, index) => (
+                <a href={`/project/${project.index}`} class="image-link">
+                  <div class="image-container">
+                    <img
+                      class="foto"
+                      src={`/${project.thumbnail[0]}`}
+                      alt={`${project.title}`}
+                    />
+                    <div class="overlay">
+                      <div class="text-container">
+                        <h2 class="text">
+                          {project.index} — {project.title} — {project.year}
+                        </h2>
+                        <p class="text2">{project.type}</p>
+                        <p class="text2">{project.status}</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              )
+            )
+          }
+        </div>
+      </div>
+    </main>
+  </NavFoot>
+
+<style>
+h1 {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .foto {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: NimbusSans;
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    line-height: 1rem;
+  }
+
+  .image-link:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .text2 {
+    color: black;
+    font-size: 20px;
+    font-family: TimesNow;
+  }
+
+  .textcel {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .columns {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 90vw;
+    }
+  }
+</style>

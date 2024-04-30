@@ -6,14 +6,13 @@ nav {
   align-items: center;
   font-family: NimbusSans;
   font-size: normal;
-  /* backdrop-filter: blur(10px); */
-  /* background-color: rgba(104, 104, 104, 0.068); */
   height: 4rem;
   z-index: 2;
 }
 
 a {
   text-decoration: none;
+  font-size: 2rem;
   color: black;
   cursor: url('/cursor.png'), auto;
 }
@@ -23,93 +22,73 @@ a {
 }
 
 .logo {
-  width: 200px;
+  width: 400px;
+  margin-top: .8rem;
 }
 
-.hover-text {
-  display: none;
-  position: absolute;
-  left: 74%;
-  transform: translateX(-50%);
-  top: 62%;
-  width: 100%;
-  text-align: center;
-  padding-top: 1.5rem;
-  gap: .5rem;
-}
-
-#contact.active .hover-text {
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-}
-
-.container-text {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  border-radius: 0 0 1rem 1rem;
-  /* background-color: rgba(104, 104, 104, 0.068); */
-}
-
-.hover-text-about {
-  position: absolute;
-  left: 30%;
-  top: 62%;
-  text-align: center;
-  padding-top: 1.5rem;
-}
-
-.container-text-about {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 0 0 1rem 1rem;
-  /* background-color: rgba(104, 104, 104, 0.068); */
-} 
-
-#about.active .hover-text-about {
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-}
-
-.logocel {
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: url('/cursor.png'), auto;
   display: none;
 }
+
+.menubtn {
+  font-size: 2rem;
+}
+
+.desplegable {
+  display: none;
+}
+
+.menu-on {
+  display: none;
+}
+
+
+
+
+
 
 @media screen and (max-width: 700px) {
 
+  .menu {
+    display: flex;
+    margin-top: .3rem;
+  }
+
   nav {
-    justify-content: center;
+    justify-content: space-around;
     gap: 1.2rem;
     font-size: 1.3rem;
   }
 
-  .logocel {
-    display: block;
-    width: 2.2rem;
-  }
-
-  .logo {
+  #projects {
     display: none;
   }
-  .container-text-about {
-    width: 200px;
-  } 
 
-  .hover-text-about {
-    left: 25%;
-    font-size: .9rem;
-    top: 62%;
+  #about {
+    display: none;
   }
 
-  .hover-text {
-    left: 63%;
-    top: 50%;
+  .menu-on {
+    display: flex;
+    position: sticky;
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    margin-left: 1rem;
+    top: 90%;
+    width: 120px;
+    left: 0;
+    flex-direction: column;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 

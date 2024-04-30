@@ -3,7 +3,7 @@ const { project } = Astro.props;
 
 ---
 
-<section aria-label="Newest Photos">
+<section aria-label="carousel-container">
   <div class="carousel" data-carousel>
     <button class="carousel-button prev" data-carousel-button="prev"><i class="bi bi-arrow-left"></i></button>
     <button class="carousel-button next" data-carousel-button="next"><i class="bi bi-arrow-right"></i></button>
@@ -80,7 +80,6 @@ body {
   inset: 0;
   opacity: 0;
   transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
 }
 
 .slide > img {
@@ -95,7 +94,7 @@ body {
 .slide[data-active] {
   opacity: 1;
   z-index: 1;
-  transition-delay: 0ms;
+  /* transition-delay: 0ms; */
 }
 
 .carousel-button {
@@ -110,7 +109,6 @@ body {
   cursor: pointer;
   border-radius: .25rem;
   padding: 0 .5rem;
-  /* background-color: rgba(0, 0, 0, .1); */
 }
 
 .carousel-button:hover,
@@ -118,16 +116,12 @@ body {
   color: black;
 }
 
-/* .carousel-button:focus {
-  outline: 1px solid rgba(0, 0, 0, 0.411);
-} */
-
 .carousel-button.prev {
-  left: 1rem;
+  left: -2.5rem;
 }
 
 .carousel-button.next {
-  right: 1rem;
+  right: -2.5rem;
 }
 
 .credits {
@@ -135,4 +129,15 @@ body {
       justify-content: end;
       font-family: Freight;
     }
+
+    @media screen and (max-width: 700px) {
+      .carousel-button {
+        margin-left: -2rem;
+        margin-right: -2rem;
+      }
+
+      .carousel {
+        height: 70vh;
+      }
+  }
 </style>

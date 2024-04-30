@@ -1,0 +1,138 @@
+---
+import NavFoot from "../../layouts/NavFoot.astro";
+import SubmenuLayout from "../../layouts/SubmenuLayout.astro";
+import process from "../../utils/process.json"
+---
+
+<NavFoot title="Federico-Liberati">
+  <main class="container">
+    <SubmenuLayout />
+    <div class="columns">
+      <div class="column">
+        {
+          process
+            .filter(
+              (process, index) => process.class === "process" && index % 2 === 0
+            )
+            .map((process, index) => (
+                <div class="image-container">
+                  <img
+                    class="foto"
+                    src={`/${process.thumbnail[0]}`}
+                    alt={`${process.title}`}
+                  />
+                </div>
+            ))
+        }
+      </div>
+      <div class="column">
+        {
+          process
+            .filter(
+              (process, index) => process.class === "process" && index % 2 !== 0
+            )
+            .map((process, index) => (
+                <div class="image-container">
+                  <img
+                    class="foto"
+                    src={`/${process.thumbnail[0]}`}
+                    alt={`${process.title}`}
+                  />
+                </div>
+            ))
+        }
+      </div>
+    </div>
+  </main>
+</NavFoot>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .foto {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: NimbusSans;
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    line-height: 1rem;
+  }
+
+  .image-link:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .text2 {
+    color: black;
+    font-size: 20px;
+    font-family: TimesNow;
+  }
+
+  .textcel {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .columns {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 90vw;
+    }
+  }
+</style>

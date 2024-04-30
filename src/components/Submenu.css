@@ -1,0 +1,31 @@
+.submenu {
+    display: flex;
+    font-family: Freight;
+    width: 100%;
+}
+
+.submenu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.submenu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.submenu a {
+    font-size: 1.5rem;
+}
+
+.active {
+    font-style: italic;
+}
+
+@media screen and (max-width: 700px) {
+    .submenu li {
+        justify-content: center;
+        gap: 5rem;
+    }
+  }
