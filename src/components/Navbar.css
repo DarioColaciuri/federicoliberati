@@ -8,22 +8,18 @@ nav {
   font-size: normal;
   height: 4rem;
   z-index: 2;
+  mix-blend-mode: difference;
 }
 
-a {
+nav a {
   text-decoration: none;
   font-size: 2rem;
-  color: black;
+  color: white;
   cursor: url('/cursor.png'), auto;
 }
 
 .active {
   font-style: italic;
-}
-
-.logo {
-  width: 400px;
-  margin-top: .8rem;
 }
 
 .menu {
@@ -47,19 +43,16 @@ a {
 
 
 
-
-
-
 @media screen and (max-width: 700px) {
 
   .menu {
     display: flex;
-    margin-top: .3rem;
+    margin-top: -.5rem;
+    margin-left: .5rem;
   }
 
   nav {
     justify-content: space-around;
-    gap: 1.2rem;
     font-size: 1.3rem;
   }
 

@@ -1,5 +1,8 @@
 import "./Navbar.css";
 import { useState } from "react";
+import Logo from "./svg/Logo"
+import Menu from "./svg/Menu"
+import Close from "./svg/Close"
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -14,14 +17,14 @@ const NavBar = () => {
   }
 
   return (
-    <nav>
+    <nav className="nav">
       {!showMenu ? (
         <button className="menu" onClick={toggleMenu}>
-          <i className="bi bi-list menubtn"></i>
+          <Menu />
         </button>
       ) : (
         <button className="menu close" onClick={toggleMenu}>
-          <i className="bi bi-x-lg menubtn"></i>
+          <Close />
         </button>
       )}
       <div className={showMenu ? "desplegable menu-on" : "desplegable"}>
@@ -45,11 +48,7 @@ const NavBar = () => {
         className={activeLink === "main" ? "active" : ""}
         onClick={() => handleLinkClick("main")}
       >
-        <img
-          className="logo"
-          src="/federicoliberati.png"
-          alt="federico liberati logo"
-        />
+        <Logo />
       </a>
 
       <a

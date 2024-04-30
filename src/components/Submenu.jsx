@@ -9,7 +9,7 @@ const Submenu = () => {
   };
 
   return (
-    <div class="submenu">
+    <div className="submenu">
       <ul>
         <li>
           <a
