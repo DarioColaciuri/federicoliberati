@@ -13,7 +13,6 @@ const Submenu = () => {
       <ul>
         <li>
           <a
-            id="projects"
             href="/projects"
             className={activeLink === "projects" ? "active" : ""}
             onClick={() => handleLinkClick("projects")}
