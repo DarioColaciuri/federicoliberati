@@ -22,7 +22,7 @@ const { project } = Astro.props;
     </ul>
   </div>
   <div class="credits">
-    {project.photocredits && <p>Photocredits: {project.photocredits}</p>}
+    {project.photocredits && <p set:html={project.photocredits}></p>}
   </div>
 </section>
 

@@ -9,7 +9,7 @@
         "program": "Coffee store",
         "client": "Agustina Patane & Romina Lewowicz",
         "location": "Buenos Aires",
-        "construction": "Estudio CE Arquitectos",
+        "construction": "<a style='color: white;' href='https://www.instagram.com/estudiocearquitectos/' target='_blank'>Estudio CE Arquitectos</a>",
         "photocredits": "Agustín Calvetti",
         "thumbnail": [
             "01project_cerezo3.webp",
@@ -41,7 +41,7 @@
         "program": "Single-family house",
         "client": "Private",
         "location": "Buenos Aires Province",
-        "construction": "Estudio ORZ",
+        "construction": "<a style='color: white;' href='https://www.instagram.com/estudio.orz' target='_blank'>Estudio ORZ</a>",
         "description": "The house occupies a corner lot, the last available in a gated community. On one of its fronts, there is the community and sports’ center of the neighborhood, and on the other, a neighbor's house. The surroundings are filled with lush vegetation. All of the neighboring houses sit at the back of their lots, leaving space for the garden and parking space at the front, unlike the typical arrangement in this type of housing of Buenos Aires Province.        The lot faces north on its long front, granting sunlight during the hole day. The overall volume is created from two solid blocks and a third one that connects them. Though from the outside the main volumes share the same height, in the interior roofs are set at different heights so as to give each space a specific character. The walls of each volume are strategically perforated to frame the exterior and flood the interior with different types of light during the day. To separate the parking area from the garden and capture the morning sun in the master bedroom, the house is set apart from the neighbor on one of its edges. A patio is incorporated in order to create an intimate outside next to the bedroom.",
         "thumbnail": [
             "02project_caracol18.webp",
@@ -87,10 +87,10 @@
         "status": "Built",
         "index": "0027",
         "program": "Bakehouse & Coffee store",
-        "client": "Andrés Brunero",
+        "client": "<a style='color: white;' href='https://www.instagram.com/andresbrunero.bread/' target='_blank'>Andrés Brunero</a>",
         "team": "Agustín Calvetti, Renzo Scotto D'Abusco",
         "location": "Buenos Aires",
-        "photocredits": "Fernando Valente, Federico Liberati",
+        "photocredits": "<a style='color: black;' href='https://www.instagram.com/fervalente/' target='_blank'>Fernando Valente</a>, Federico Liberati",
         "thumbnail": [
             "04project_cruasan3.webp",
             "04project_cruasan1.webp",
@@ -124,7 +124,7 @@
         "status": "Built",
         "index": "0023",
         "program": "Pasta store",
-        "client": "Soma Pastas",
+        "client": "<a style='color: white;' href='https://www.instagram.com/estoessoma.pasta' target='_blank'>Soma Pastas</a>",
         "location": "Buenos Aires",
         "related": "SOMA 2",
         "photocredits": "Agustín Calvetti",
@@ -177,7 +177,7 @@
         "location": "Buenos Aires Province",
         "photocredits": "Agustín Calvetti",
         "association": "Santiago Vizzcoco",
-        "constructiondesign": "Itmet",
+        "constructiondesign": "<a style='color: white;' href='https://itmetestudio.com/' target='_blank'>Itmet</a>",
         "thumbnail": [
             "07project_cde1.webp",
             "07project_cde2.webp",
@@ -196,7 +196,7 @@
         "status": "Built",
         "index": "0025",
         "program": "Pizza Store & Production center",
-        "client": "Pomodoro al paso",
+        "client": "<a style='color: white;' href='https://itmetestudio.com/' target='_blank'>Pomodoro al paso</a>",
         "location": "Buenos Aires",
         "team": "Agustín Calvetti, Renzo Scotto D'Abusco",
         "thumbnail": [

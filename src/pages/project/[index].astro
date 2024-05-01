@@ -65,7 +65,7 @@ export function getStaticPaths() {
             project.client && (
               <div class="container">
                 <p class="italic">client:</p>
-                <span class="normal">{project.client}</span>
+                <span class="normal" set:html={project.client}></span>
               </div>
             )
           }
@@ -91,7 +91,7 @@ export function getStaticPaths() {
             project.construction && (
               <div class="container">
                 <p class="italic">construction:</p>
-                <span class="normal">{project.construction}</span>
+                <span class="normal" set:html={project.construction}></span>
               </div>
             )
           }
@@ -115,7 +115,7 @@ export function getStaticPaths() {
             project.constructiondesign && (
               <div class="container">
                 <p class="italic">construction design:</p>
-                <span class="normal">{project.constructiondesign}</span>
+                <span class="normal" set:html={project.constructiondesign}></span>
               </div>
             )
           }
