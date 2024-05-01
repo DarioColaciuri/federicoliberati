@@ -41,6 +41,8 @@ import NavFoot from "../layouts/NavFoot.astro";
   .container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 90vw;
     gap: 2rem;
   }
 
@@ -55,4 +57,12 @@ import NavFoot from "../layouts/NavFoot.astro";
   .text2, .text3 {
     font-family: Freight;
   }
+
+  @media screen and (max-width: 700px) {
+
+    .container-texto {
+      width: 90vw;
+    }
+
+}
 </style>

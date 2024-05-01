@@ -7,11 +7,14 @@
 .submenu ul {
     list-style: none;
     width: 100%;
+
+    padding-left: 0;
 }
 
 .submenu li {
     display: flex;
     align-items: center;
+
     justify-content: space-around;
 }
 
@@ -27,9 +30,14 @@
 
 @media screen and (max-width: 700px) {
 
+    .submenu {
+        align-items: center;
+        justify-content: center;
+    }
+
     .submenu li {
         justify-content: center;
-        /* gap: 5rem; */
+        gap: 1rem;
     }
 
   }
