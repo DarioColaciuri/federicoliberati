@@ -21,9 +21,6 @@ const { project } = Astro.props;
       </Fragment>
     </ul>
   </div>
-  <div class="credits">
-    {project.photocredits && <p set:html={project.photocredits}></p>}
-  </div>
 </section>
 
 <script is:inline data-astro-rerun>
@@ -68,6 +65,7 @@ body {
   width: 70vw;
   height: 90vh;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .carousel > ul {

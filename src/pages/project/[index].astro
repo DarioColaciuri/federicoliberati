@@ -127,7 +127,18 @@ export function getStaticPaths() {
               </div>
             )
           }
+          {
+            project.photocredits && (
+              <div class="container">
+                <p class="italic">photocredits:</p>
+                <span class="normal" set:html={project.photocredits}></span>
+              </div>
+            )
+          }
         </div>
+        <!-- <div class="credits">
+          {project.photocredits && <p set:html={project.photocredits}></p>}
+        </div> -->
       </div>
       <div class="description">
         {project.description && <p>{project.description}</p>}
