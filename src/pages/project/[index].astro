@@ -31,7 +31,7 @@ export function getStaticPaths() {
           {
             project.year && (
               <div class="container">
-                <p class="italic">year:</p>
+                <p class="italic">year</p>
                 <span class="normal">{project.year}</span>
               </div>
             )
@@ -40,7 +40,7 @@ export function getStaticPaths() {
           {
             project.type && (
               <div class="container">
-                <p class="italic">type:</p>
+                <p class="italic">type</p>
                 <span class="normal">{project.type}</span>
               </div>
             )
@@ -48,7 +48,7 @@ export function getStaticPaths() {
           {
             project.program && (
               <div class="container">
-                <p class="italic">program:</p>
+                <p class="italic">program</p>
                 <span class="normal">{project.program}</span>
               </div>
             )
@@ -56,7 +56,7 @@ export function getStaticPaths() {
           {
             project.materials && (
               <div class="container">
-                <p class="italic">materials:</p>
+                <p class="italic">materials</p>
                 <span class="normal">{project.materials}</span>
               </div>
             )
@@ -64,8 +64,8 @@ export function getStaticPaths() {
           {
             project.client && (
               <div class="container">
-                <p class="italic">client:</p>
-                <span class="normal" set:html={project.client}></span>
+                <p class="italic">client</p>
+                <span class="normal" set:html={project.client} />
               </div>
             )
           }
@@ -74,7 +74,7 @@ export function getStaticPaths() {
           {
             project.location && (
               <div class="container">
-                <p class="italic">location:</p>
+                <p class="italic">location</p>
                 <span class="normal">{project.location}</span>
               </div>
             )
@@ -82,7 +82,7 @@ export function getStaticPaths() {
           {
             project.status && (
               <div class="container">
-                <p class="italic">status:</p>
+                <p class="italic">status</p>
                 <span class="normal">{project.status}</span>
               </div>
             )
@@ -90,15 +90,23 @@ export function getStaticPaths() {
           {
             project.construction && (
               <div class="container">
-                <p class="italic">construction:</p>
-                <span class="normal" set:html={project.construction}></span>
+                <p class="italic">construction</p>
+                <span class="normal" set:html={project.construction} />
+              </div>
+            )
+          }
+          {
+            project.constructionmanagement && (
+              <div class="container">
+                <p class="italic">construction management</p>
+                <span class="normal" set:html={project.constructionmanagement} />
               </div>
             )
           }
           {
             project.team && (
               <div class="container">
-                <p class="italic">team:</p>
+                <p class="italic">team</p>
                 <span class="normal">{project.team}</span>
               </div>
             )
@@ -106,7 +114,7 @@ export function getStaticPaths() {
           {
             project.association && (
               <div class="container">
-                <p class="italic">association:</p>
+                <p class="italic">association</p>
                 <span class="normal">{project.association}</span>
               </div>
             )
@@ -114,15 +122,15 @@ export function getStaticPaths() {
           {
             project.constructiondesign && (
               <div class="container">
-                <p class="italic">construction design:</p>
-                <span class="normal" set:html={project.constructiondesign}></span>
+                <p class="italic">construction design</p>
+                <span class="normal" set:html={project.constructiondesign} />
               </div>
             )
           }
           {
             project.related && (
               <div class="container">
-                <p class="italic">related:</p>
+                <p class="italic">related</p>
                 <span class="normal">{project.related}</span>
               </div>
             )
@@ -130,8 +138,8 @@ export function getStaticPaths() {
           {
             project.photocredits && (
               <div class="container">
-                <p class="italic">photocredits:</p>
-                <span class="normal" set:html={project.photocredits}></span>
+                <p class="italic">photocredits</p>
+                <span class="normal" set:html={project.photocredits} />
               </div>
             )
           }
@@ -260,8 +268,6 @@ export function getStaticPaths() {
     .info-container {
       display: flex;
       flex-direction: column;
-
     }
-
   }
 </style>
