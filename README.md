@@ -1,4 +1,4 @@
-<img align="right" height="200" src="https://i.postimg.cc/QN707DFY/logo-1.png"  />
+<img align="right" height="200" src=""  />
 
 ###
 
@@ -12,6 +12,7 @@
 
 <div align="center">
   <img src="https://astro.build/assets/press/astro-icon-light-gradient.png" height="40" alt="react logo"  />
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
