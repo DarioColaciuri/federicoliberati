@@ -5,6 +5,10 @@ import NavFoot from "../layouts/NavFoot.astro";
 <NavFoot title="Federico-Liberati">
   <div class="container-gral">
     <div class="container">
+      <div class="container-menu">
+        <h3 class="info">INFO,</h3>
+        <a href="/bio" class="bio-info"><h3 class="bio">BIO,</h3></a>
+      </div>
       <img src="/about.jpg" alt="federico liberati" />
       <div class="container-texto">
         <p class="text1">
@@ -38,12 +42,29 @@ import NavFoot from "../layouts/NavFoot.astro";
     align-items: center;
   }
 
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    font-family: NimbusSans;
+    line-height: 0.01;
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 90vw;
     gap: 2rem;
+  }
+
+  .bio {
+    color:rgb(156, 156, 156);
+    text-decoration: none;
+  }
+
+  .bio-info {
+    text-decoration: none;
   }
 
   .container-texto {

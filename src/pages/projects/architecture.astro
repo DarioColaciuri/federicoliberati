@@ -2,11 +2,16 @@
 import NavFoot from "../../layouts/NavFoot.astro"; 
 import SubmenuLayout from "../../layouts/SubmenuLayout.astro";
 import projects from "../../utils/projects.json"
+import Arrow from "../../components/svg/Arrow"
 
 ---
 
 <NavFoot title="Federico-Liberati">
-    <main class="container">
+  <div class="title-container">
+    <h1 class="title">ARCHITECTURE,</h1>
+    <a class="arrow" href="#project"><Arrow /> </a>
+    </div>
+    <main id="project" class="container">
       <SubmenuLayout />
       <div class="columns">
         <div class="column">
@@ -70,11 +75,46 @@ h1 {
     text-align: center;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .title {
+  text-align: start;
+  margin-left: 1rem;
+  font-family: NimbusSans;
+  font-weight: 100;
+  font-size: 3rem;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: end;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .title {
+  text-align: start;
+  margin-top: 70vh;
+  margin-left: 1rem;
+  font-family: NimbusSans;
+  font-weight: 100;
+  font-size: 3rem;
   }
 
   .columns {

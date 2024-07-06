@@ -1,0 +1,63 @@
+.index {
+  line-height: 0.4rem;
+  font-family: NimbusSans;
+  margin-left: 15.3rem;
+}
+
+.sort-buttons {
+  display: flex;
+  margin-left: 15rem;
+  gap: 4rem;
+}
+
+.button {
+    display: flex;
+    border: none;
+    background-color: transparent;
+}
+
+.project {
+  display: flex;
+  gap: 4rem;
+  font-size: 0.4rem;
+  width: 700px;
+  color:rgb(156, 156, 156);
+  text-decoration: none;
+  cursor: url('/cursor.png'), auto;
+}
+
+.project:hover {
+  color: black;
+}
+
+#project {
+  margin-bottom: 5rem;
+}
+
+
+.container-year,
+.container-title,
+.container-type,
+.container-index {
+  width: 100px;
+}
+
+.container-status {
+  width: 50px;
+  text-align: end;
+}
+
+.index-img {
+  width: 10rem;
+  position: absolute;
+  right: 10%;
+  top: 120%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .index-img {
+  opacity: 1;
+}
+
+

@@ -1,8 +1,10 @@
 import "./Navbar.css";
 import { useState } from "react";
-import Logo from "./svg/Logo"
-import Menu from "./svg/Menu"
-import Close from "./svg/Close"
+import Logo from "./svg/Logo";
+import Menu from "./svg/Menu";
+import Close from "./svg/Close";
+import Back from "./svg/Back";
+
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -14,51 +16,38 @@ const NavBar = () => {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-  }
+  };
+
+  const handleBackClick = (event) => {
+    event.preventDefault(); 
+    window.history.back(); 
+  };
 
   return (
     <nav className="nav">
-      {!showMenu ? (
-        <button className="menu" onClick={toggleMenu}>
-          <Menu />
-        </button>
-      ) : (
-        <button className="menu close" onClick={toggleMenu}>
-          <Close />
-        </button>
-      )}
-      <div className={showMenu ? "desplegable menu-on" : "desplegable"}>
-        <div className="container">
-          <a href="/projects">projects</a>
-          <a href="/about">about</a>
+      <div className="nav-content">
+        <a className="nav-back" href="#" onClick={handleBackClick}>
+        <Back />
+        </a>
+        <a className="nav-logo-cel"  href="/main">
+          <img className="isologo" src="/isologo.png" alt="isologo" />
+        </a>
+        <a className="nav-logo" id="main" href="/main">
+          <Logo />
+        </a>
+        <div className="nav-menu">
+          <button className="menu" onClick={toggleMenu}>
+            {showMenu ? <Close /> : <Menu />}
+          </button>
         </div>
       </div>
-      <a
-        id="projects"
-        href="/projects"
-        className={activeLink === "projects" ? "active" : ""}
-        onClick={() => handleLinkClick("projects")}
-      >
-        projects
-      </a>
-
-      <a
-        id="main"
-        href="/main"
-        className={activeLink === "main" ? "active" : ""}
-        onClick={() => handleLinkClick("main")}
-      >
-        <Logo />
-      </a>
-
-      <a
-        id="about"
-        href="/about"
-        className={activeLink === "about" ? "active" : ""}
-        onClick={() => handleLinkClick("about")}
-      >
-        about
-      </a>
+      {showMenu && (
+        <div className="dropdown-menu">
+          <a href="/projects" onClick={() => handleLinkClick('link1')} className={activeLink === 'link1' ? 'active' : ''}>OBRAS,</a>
+          <a href="/info" onClick={() => handleLinkClick('link2')} className={activeLink === 'link2' ? 'active' : ''}>INFO,</a>
+          <a href="/contact" onClick={() => handleLinkClick('link3')} className={activeLink === 'link3' ? 'active' : ''}>CONTACTO,</a>
+        </div>
+      )}
     </nav>
   );
 };

@@ -4,17 +4,20 @@ nav {
   top: 0;
   justify-content: space-around;
   align-items: center;
-  font-family: NimbusSans;
   font-size: normal;
-  height: 4rem;
   z-index: 2;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
+  padding-top: 0.3rem;
+  font-family: NimbusSans;
+  font-weight: 100;
+  font-size: 3rem;
+  background-color: transparent;
+  z-index: 98;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 2rem;
-  color: white;
+  color: black;
   cursor: url('/cursor.png'), auto;
 }
 
@@ -23,10 +26,12 @@ nav a {
 }
 
 .menu {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
+  z-index: 99;
   cursor: url('/cursor.png'), auto;
-  display: none;
 }
 
 .menubtn {
@@ -41,13 +46,79 @@ nav a {
   display: none;
 }
 
+#logocel {
+  display: none;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  justify-content: center;
+}
+
+.nav-logo {
+  display: flex;
+  width: 60vw;
+  justify-content: right;
+  z-index: 99;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  width: 30vw;
+  justify-content: right;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.5rem;
+  position: fixed;
+  background-color: white;
+  color: black;
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isologo {
+  display: none;
+}
+
 
 
 @media screen and (max-width: 700px) {
 
   .menu {
     display: flex;
-    margin-top: -.5rem;
+    align-items: center;
+    margin-left: 1rem;
+    z-index: 2;
+  }
+
+  .nav-content {
+    align-items: center;
+    width: 100vw;
+    margin: 0 30px 0 30px;
+    justify-content: space-between;
+  }
+
+  .nav-back {
+    display: none;
+  }
+
+  #main {
+    display: none;
   }
 
   nav {
@@ -56,7 +127,11 @@ nav a {
   }
 
   .logo {
-    width: 300px;
+    width: 100vw;
+  }
+
+  .close {
+    margin-top: .6rem;
   }
 
   #projects {
@@ -73,7 +148,7 @@ nav a {
     position: absolute;
     z-index: 3;
     text-align: center;
-    margin-left: 1rem;
+    margin-left: 200px;
     top: 90%;
     width: 120px;
     left: 0;
@@ -83,6 +158,17 @@ nav a {
   .container {
     display: flex;
     flex-direction: column;
+  }
+
+  #logocel {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .isologo {
+    display: flex;
+    width: 90px;
   }
 
 }

@@ -55,6 +55,7 @@ import NavBar from "../components/Navbar";
     />
     <meta name="robots" content="follow" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://use.typekit.net/gsc4pfd.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -66,7 +67,7 @@ import NavBar from "../components/Navbar";
   <body>
     <NavBar transition:persist client:only="react" />
       <slot />
-    <Footer />
+    <!-- <Footer /> -->
   </body>
   
 </html>

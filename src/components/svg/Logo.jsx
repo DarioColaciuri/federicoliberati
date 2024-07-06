@@ -7,11 +7,11 @@ const Logo = () => {
       height="70px"
       viewBox="0 0 5001.000000 835.000000"
       preserveAspectRatio="xMidYMid meet"
-      className="logo"
+      className="logo center"
     >
       <g
         transform="translate(0.000000,835.000000) scale(0.100000,-0.100000)"
-        fill="#ffffff"
+        fill="#000000"
         stroke="none"
       >
         <path

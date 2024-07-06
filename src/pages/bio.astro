@@ -1,0 +1,88 @@
+---
+import NavFoot from "../layouts/NavFoot.astro";
+---
+
+<NavFoot title="Federico-Liberati">
+  <div class="container-gral">
+    <div class="container">
+      <div class="container-menu">
+        <a href="/info" class="link-info"><h3 class="info">INFO,</h3></a>
+        <h3 class="bio">BIO,</h3>
+      </div>
+      <img src="/about.jpg" alt="federico liberati" />
+      <div class="container-texto">
+        <p class="text1">
+          I’m an Argentinian architect based in Buenos Aires & Barcelona. I’ve
+          started my solo practice in 2017, having worked in association with
+          other professionals throughout the years. I specialize on commercial &
+          gastronomic architecture aswell on private housing & refurbishments.
+          Each project is developed with site specific solutions and bespoke
+          furniture & objects, intending to portray a unique vision for each of
+          them.
+        </p>
+        <p class="text2">
+          I was born in 1992 and obtained my Double Degree as an architect, with
+          Honor Diploma, at Universidad de Belgrano (AR) & Politecnico di Torino
+          (IT) in 2016. In 2022 I received a Master’s Degree on BIM Management
+          from the Polythecnic University of Catalunya (ES).
+        </p>
+        <p class="text3">
+          I have also worked as a teacher and researcher at Universidad de
+          Belgrano (2013-2021).
+        </p>
+      </div>
+    </div>
+  </div>
+</NavFoot>
+
+<style>
+  .container-gral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    font-family: NimbusSans;
+    line-height: 0.01;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    gap: 2rem;
+  }
+
+  .info {
+    color:rgb(156, 156, 156);
+  }
+
+  .link-info {
+    text-decoration: none;
+  }
+
+  .container-texto {
+    width: 30vw;
+  }
+
+  .text1 {
+    font-family: NimbusSans;
+  }
+
+  .text2, .text3 {
+    font-family: Freight;
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .container-texto {
+      width: 90vw;
+    }
+
+}
+</style>

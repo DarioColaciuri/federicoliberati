@@ -43,6 +43,14 @@ const Submenu = () => {
           >
             process
           </a>
+          <a
+            id="indices"
+            href="/projects/indices"
+            className={activeLink === "indices" ? "active" : ""}
+            onClick={() => handleLinkClick("indices")}
+          >
+            index
+          </a>
         </li>
       </ul>
     </div>

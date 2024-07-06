@@ -2,6 +2,7 @@
 import projects from "../../utils/projects.json";
 import NavFoot from "../../layouts/NavFoot.astro";
 import Carousel from "../../components/Carousel.astro";
+import Arrow from "../../components/svg/Arrow"
 
 const { index } = Astro.params;
 
@@ -22,9 +23,10 @@ export function getStaticPaths() {
 <NavFoot title="Federico-Liberati">
   <div class="project-container">
     <Carousel transition:persist project={project} />
+    <a href="#project"><Arrow /></a>
   </div>
   <div class="color">
-    {project.title && <h1 class="titulo">{project.title}</h1>}
+    {project.title && <h1 id="project" class="titulo">{project.title}</h1>}
     <div class="info-container">
       <div class="info">
         <div class="container1">
@@ -144,9 +146,6 @@ export function getStaticPaths() {
             )
           }
         </div>
-        <!-- <div class="credits">
-          {project.photocredits && <p set:html={project.photocredits}></p>}
-        </div> -->
       </div>
       <div class="description">
         {project.description && <p>{project.description}</p>}
@@ -156,6 +155,11 @@ export function getStaticPaths() {
 </NavFoot>
 
 <style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   .project-container {
     display: flex;
     flex-direction: column;
@@ -209,8 +213,8 @@ export function getStaticPaths() {
   .color {
     padding-top: 2rem;
     padding-bottom: 4rem;
-    background-color: #0e8173;
-    color: #f1eee5;
+    color: black
+    height: 100dvh;
   }
 
   .container1 {

@@ -2,13 +2,17 @@
 import NavFoot from "../layouts/NavFoot.astro";
 import projects from "../utils/projects.json";
 import SubmenuLayout from "../layouts/SubmenuLayout.astro";
-
+import Arrow from "../components/svg/Arrow"
 ---
 
 <NavFoot title="Federico-Liberati" >
+  <div class="title-container">
+  <h1 class="title">OBRAS,</h1>
+  <a class="arrow" href="#project"><Arrow /> </a>
+  </div>
   <main class="container">
     <SubmenuLayout />
-      <div class="columns">
+      <div class="columns" id="project">
         <div class="column">
           {
             projects.map(
@@ -68,9 +72,15 @@ import SubmenuLayout from "../layouts/SubmenuLayout.astro";
 </NavFoot>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   h1 {
     text-align: center;
   }
+
+
 
   .container {
     display: flex;
@@ -129,6 +139,10 @@ import SubmenuLayout from "../layouts/SubmenuLayout.astro";
     line-height: 1rem;
   }
 
+  .image-link {
+    cursor: url('/cursor.png'), auto;
+  }
+
   .image-link:hover .overlay {
     opacity: 1;
   }
@@ -147,6 +161,28 @@ import SubmenuLayout from "../layouts/SubmenuLayout.astro";
 
   .textcel {
     display: none;
+  }
+
+  .title {
+  text-align: start;
+  margin-left: 1rem;
+  font-family: NimbusSans;
+  font-weight: 100;
+  font-size: 3rem;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: end;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
   }
 
   @media screen and (max-width: 700px) {

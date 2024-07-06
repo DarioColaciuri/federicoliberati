@@ -1,6 +1,6 @@
 [
     {
-        "year": "2023-",
+        "year": "2023",
         "index": "0058",
         "title": "ABRAX",
         "type": "housing",
@@ -11,28 +11,36 @@
         "index": "0057",
         "title": "CEREZO",
         "type": "commercial",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "01project_cerezo1.webp",
+        "link": "0057"
     },
     {
         "year": "2021-2023",
         "index": "0051",
         "title": "CARACOL",
         "type": "housing",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "02project_caracol1.webp",
+        "link": "0051"
     },
     {
         "year": "2021",
         "index": "0043",
         "title": "D903",
         "type": "commercial",
-        "status": "unbuilt"
+        "status": "unbuilt",
+        "thumbnail": "03project_d903_01.gif",
+        "link": "0043"
     },
     {
         "year": "2021",
         "index": "0038",
         "title": "NUNA",
         "type": "commercial",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "06project_nuna3.webp",
+        "link": "0038"
     },
     {
         "year": "2020",
@@ -46,7 +54,9 @@
         "index": "0027",
         "title": "CRUASÁN",
         "type": "commercial",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "04project_cruasan1.webp",
+        "link": "0027"
     },
     {
         "year": "2020",
@@ -60,7 +70,9 @@
         "index": "0025",
         "title": "POMODORO",
         "type": "commercial",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "08project_pomodoro5.webp",
+        "link": "0025"
     },
     {
         "year": "2020",
@@ -74,7 +86,9 @@
         "index": "0023",
         "title": "SOMA",
         "type": "commercial",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "05project_soma1.webp",
+        "link": "0023"
     },
     {
         "year": "2019",
@@ -88,7 +102,9 @@
         "index": "0018",
         "title": "CDE",
         "type": "furniture",
-        "status": "built"
+        "status": "built",
+        "thumbnail": "07project_cde1.webp",
+        "link": "0018"
     },
     {
         "year": "2019",
