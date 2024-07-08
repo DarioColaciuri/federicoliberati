@@ -82,7 +82,7 @@ nav a {
   position: fixed;
   background-color: white;
   color: #114991;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -113,7 +113,7 @@ nav a {
   position: fixed;
   background-color: white;
   color: #114991;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   bottom: 0;
   left: 0;

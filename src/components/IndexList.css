@@ -60,4 +60,28 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 700px) {
+  .index, .sort-buttons {
+    margin-left: 0;
+  }
+
+  .project {
+    gap: 0;
+    width: 100dvw;
+    justify-content: center;
+  }
+
+  .container-year,
+.container-title,
+.container-type {
+  width: 80px;
+}
+
+.container-index {
+  width: 50px;
+}
+
+
+}
+
 
