@@ -72,16 +72,20 @@
   }
 
   .container-year,
-.container-title,
 .container-type {
   width: 80px;
+}
+
+.container-title {
+  width: 110px;
+}
+
+.container-year {
+  width: 70px;
 }
 
 .container-index {
   width: 50px;
 }
 
-
 }
-
-
