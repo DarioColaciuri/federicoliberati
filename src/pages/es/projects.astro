@@ -1,24 +1,25 @@
 ---
-import NavFoot from "../layouts/NavFoot.astro";
-import projects from "../utils/projects.json";
-import SubmenuLayout from "../layouts/SubmenuLayout.astro";
-import Arrow from "../components/svg/Arrow"
+import NavFootES from "../../layouts/NavFootES.astro";
+import projects from "../../utils/projectsES.json";
+import SubmenuLayoutES from "../../layouts/SubmenuLayoutES.astro";
+import Arrow from "../../components/svg/Arrow"
+
 ---
 
-<NavFoot title="Federico-Liberati" >
+<NavFootES title="Federico-Liberati" >
   <div class="title-container">
-  <h1 class="title">PROJECTS,</h1>
+  <h1 class="title">OBRAS,</h1>
   <a class="arrow" href="#project"><Arrow /> </a>
   </div>
   <main class="container">
-    <SubmenuLayout />
+    <SubmenuLayoutES />
       <div class="columns" id="project">
         <div class="column">
           {
             projects.map(
               (project, index) =>
                 index % 2 === 0 && (
-                  <a href={`/project/${project.index}`} class="image-link">
+                  <a href={`/es/project/${project.index}`} class="image-link">
                     <div class="image-container">
                       <img
                         class="foto"
@@ -45,7 +46,7 @@ import Arrow from "../components/svg/Arrow"
             projects.map(
               (project, index) =>
                 index % 2 !== 0 && (
-                  <a href={`/project/${project.index}`} class="image-link">
+                  <a href={`/es/project/${project.index}`} class="image-link">
                     <div class="image-container">
                       <img
                         class="foto"
@@ -69,7 +70,7 @@ import Arrow from "../components/svg/Arrow"
         </div>
       </div>
   </main>
-</NavFoot>
+</NavFootES>
 
 <style>
   html {

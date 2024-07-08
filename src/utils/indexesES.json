@@ -1,0 +1,151 @@
+[
+    {
+        "year": "2023",
+        "index": "0058",
+        "title": "ABRAX",
+        "type": "hogar",
+        "status": "en curso"
+    },
+    {
+        "year": "2023",
+        "index": "0057",
+        "title": "CEREZO",
+        "type": "comercial",
+        "status": "construído",
+        "thumbnail": "01project_cerezo1.webp",
+        "link": "0057"
+    },
+    {
+        "year": "2021-2023",
+        "index": "0051",
+        "title": "CARACOL",
+        "type": "hogar",
+        "status": "construído",
+        "thumbnail": "02project_caracol1.webp",
+        "link": "0051"
+    },
+    {
+        "year": "2021",
+        "index": "0043",
+        "title": "D903",
+        "type": "comercial",
+        "status": "no construido",
+        "thumbnail": "03project_d903_01.gif",
+        "link": "0043"
+    },
+    {
+        "year": "2021",
+        "index": "0038",
+        "title": "NUNA",
+        "type": "comercial",
+        "status": "construído",
+        "thumbnail": "06project_nuna3.webp",
+        "link": "0038"
+    },
+    {
+        "year": "2020",
+        "index": "0032",
+        "title": "CERRITO",
+        "type": "oficina",
+        "status": "construído"
+    },
+    {
+        "year": "2020-2021",
+        "index": "0027",
+        "title": "CRUASÁN",
+        "type": "comercial",
+        "status": "construído",
+        "thumbnail": "04project_cruasan1.webp",
+        "link": "0027"
+    },
+    {
+        "year": "2020",
+        "index": "0026",
+        "title": "NATURALLY",
+        "type": "comercial",
+        "status": "no construido"
+    },
+    {
+        "year": "2020",
+        "index": "0025",
+        "title": "POMODORO",
+        "type": "comercial",
+        "status": "construído",
+        "thumbnail": "08project_pomodoro5.webp",
+        "link": "0025"
+    },
+    {
+        "year": "2020",
+        "index": "0024",
+        "title": "PARRACA",
+        "type": "comercial",
+        "status": "construído"
+    },
+    {
+        "year": "2020",
+        "index": "0023",
+        "title": "SOMA",
+        "type": "comercial",
+        "status": "construído",
+        "thumbnail": "05project_soma1.webp",
+        "link": "0023"
+    },
+    {
+        "year": "2019",
+        "index": "0020",
+        "title": "MONTEVIDEO",
+        "type": "comercial",
+        "status": "no construido"
+    },
+    {
+        "year": "2019",
+        "index": "0018",
+        "title": "CDE",
+        "type": "mobiliario",
+        "status": "construído",
+        "thumbnail": "07project_cde1.webp",
+        "link": "0018"
+    },
+    {
+        "year": "2019",
+        "index": "0015",
+        "title": "AYACUCHO",
+        "type": "remodelación",
+        "status": "construído"
+    },
+    {
+        "year": "2018",
+        "index": "0010",
+        "title": "LIBERTADOR",
+        "type": "mobiliario",
+        "status": "no construido"
+    },
+    {
+        "year": "2018",
+        "index": "0008",
+        "title": "COE",
+        "type": "oficina",
+        "status": "no construido"
+    },
+    {
+        "year": "2017",
+        "index": "0006",
+        "title": "SEGUÍ",
+        "type": "remodelación",
+        "status": "construído"
+    },
+    {
+        "year": "2017",
+        "index": "0005",
+        "title": "67",
+        "type": "remodelación",
+        "status": "no construido"
+    },
+    {
+        "year": "2017",
+        "index": "0002",
+        "title": "TEHE",
+        "type": "comercial",
+        "status": "construído"
+    }
+]

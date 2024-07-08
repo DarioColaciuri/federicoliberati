@@ -1,13 +1,13 @@
 ---
-import NavFoot from "../layouts/NavFoot.astro";
+import NavFootES from "../../layouts/NavFootES.astro";
 ---
 
-<NavFoot title="Federico-Liberati">
+<NavFootES title="Federico-Liberati">
   <div class="container-gral">
     <div class="container">
       <div class="container-menu">
-        <h3 class="info">INFO,</h3>
-        <a href="/bio" class="bio-info"><h3 class="bio">BIO,</h3></a>
+        <a href="/es/info" class="link-info"><h3 class="info">INFO,</h3></a>
+        <h3 class="bio">BIO,</h3>
       </div>
       <img src="/about.jpg" alt="federico liberati" />
       <div class="container-texto">
@@ -33,7 +33,7 @@ import NavFoot from "../layouts/NavFoot.astro";
       </div>
     </div>
   </div>
-</NavFoot>
+</NavFootES>
 
 <style>
   .container-gral {
@@ -58,12 +58,11 @@ import NavFoot from "../layouts/NavFoot.astro";
     gap: 2rem;
   }
 
-  .bio {
-    color:#9c9c9c;
-    text-decoration: none;
+  .info {
+    color:rgb(156, 156, 156);
   }
 
-  .bio-info {
+  .link-info {
     text-decoration: none;
   }
 

@@ -4,7 +4,7 @@ const Close = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="25"
-      fill="#000000"
+      fill="#114991"
       className="bi bi-x-lg center"
       viewBox="0 0 16 16"
     >

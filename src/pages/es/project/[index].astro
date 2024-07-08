@@ -1,0 +1,277 @@
+---
+import projects from "../../../utils/projectsES.json";
+import NavFootES from "../../../layouts/NavFootES.astro";
+import Carousel from "../../../components/Carousel.astro";
+import Arrow from "../../../components/svg/Arrow"
+
+const { index } = Astro.params;
+
+let project = null;
+if (index) {
+  project = projects.find((project) => project.index === index);
+}
+
+export function getStaticPaths() {
+  const paths = projects.map((project) => ({
+    params: { index: project.index.toString() },
+  }));
+
+  return paths;
+}
+---
+
+<NavFootES title="Federico-Liberati">
+  <div class="project-container">
+    <Carousel transition:persist project={project} />
+    <a href="#project"><Arrow /></a>
+  </div>
+  <div class="color">
+    {project.title && <h1 id="project" class="titulo">{project.title}</h1>}
+    <div class="info-container">
+      <div class="info">
+        <div class="container1">
+          {
+            project.year && (
+              <div class="container">
+                <p class="italic">año</p>
+                <span class="normal">{project.year}</span>
+              </div>
+            )
+          }
+
+          {
+            project.type && (
+              <div class="container">
+                <p class="italic">tipo</p>
+                <span class="normal">{project.type}</span>
+              </div>
+            )
+          }
+          {
+            project.program && (
+              <div class="container">
+                <p class="italic">programa</p>
+                <span class="normal">{project.program}</span>
+              </div>
+            )
+          }
+          {
+            project.materials && (
+              <div class="container">
+                <p class="italic">materiales</p>
+                <span class="normal">{project.materials}</span>
+              </div>
+            )
+          }
+          {
+            project.client && (
+              <div class="container">
+                <p class="italic">cliente</p>
+                <span class="normal" set:html={project.client} />
+              </div>
+            )
+          }
+        </div>
+        <div class="container2">
+          {
+            project.location && (
+              <div class="container">
+                <p class="italic">locación</p>
+                <span class="normal">{project.location}</span>
+              </div>
+            )
+          }
+          {
+            project.status && (
+              <div class="container">
+                <p class="italic">estado</p>
+                <span class="normal">{project.status}</span>
+              </div>
+            )
+          }
+          {
+            project.construction && (
+              <div class="container">
+                <p class="italic">construcción</p>
+                <span class="normal" set:html={project.construction} />
+              </div>
+            )
+          }
+          {
+            project.constructionmanagement && (
+              <div class="container">
+                <p class="italic">constructora</p>
+                <span class="normal" set:html={project.constructionmanagement} />
+              </div>
+            )
+          }
+          {
+            project.team && (
+              <div class="container">
+                <p class="italic">equipo</p>
+                <span class="normal">{project.team}</span>
+              </div>
+            )
+          }
+          {
+            project.association && (
+              <div class="container">
+                <p class="italic">asociación</p>
+                <span class="normal">{project.association}</span>
+              </div>
+            )
+          }
+          {
+            project.constructiondesign && (
+              <div class="container">
+                <p class="italic">diseño de construcción</p>
+                <span class="normal" set:html={project.constructiondesign} />
+              </div>
+            )
+          }
+          {
+            project.related && (
+              <div class="container">
+                <p class="italic">relacionado</p>
+                <span class="normal">{project.related}</span>
+              </div>
+            )
+          }
+          {
+            project.photocredits && (
+              <div class="container">
+                <p class="italic">fotografía</p>
+                <span class="normal" set:html={project.photocredits} />
+              </div>
+            )
+          }
+        </div>
+      </div>
+      <div class="description">
+        {project.description && <p>{project.description}</p>}
+      </div>
+    </div>
+  </div>
+</NavFootES>
+
+<style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    font-family: Freight;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    line-height: 0.05rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .normal {
+    font-style: normal;
+  }
+
+  .description {
+    width: 600px;
+    font-size: 1.2rem;
+  }
+
+  .titulo {
+    font-family: NimbusSans;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .color {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    color: black
+    height: 100dvh;
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 700px) {
+    .info-container {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      justify-content: start;
+      gap: 3rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .container1 {
+      display: flex;
+      flex: row;
+    }
+
+    .description {
+      line-height: normal;
+      width: 300px;
+    }
+
+    .color {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 646px) {
+    .description {
+      /* text-align: center; */
+      width: 90%;
+    }
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

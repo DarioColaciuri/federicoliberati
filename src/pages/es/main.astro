@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import NavFootES from "../../layouts/NavFootES.astro";
+---
+
+<NavFootES title="Federico-Liberati">
+  <main class="img-container">
+    <Image
+      class="logomain"
+      src="/logo.png"
+      alt="Federico-Liberati logo"
+      width={160}
+      height={160}
+    />
+  </main>
+</NavFootES>
+
+<style>
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81dvh;
+  }
+
+</style>

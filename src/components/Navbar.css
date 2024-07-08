@@ -17,7 +17,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #114991;
   cursor: url('/cursor.png'), auto;
 }
 
@@ -70,6 +70,10 @@ nav a {
   justify-content: right;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .dropdown-menu {
   display: flex;
   flex-direction: column;
@@ -77,12 +81,43 @@ nav a {
   gap: 0.5rem;
   position: fixed;
   background-color: white;
-  color: black;
+  color: #114991;
   height: 100vh;
   width: 100%;
   bottom: 0;
   left: 0;
   padding: 1rem;
+}
+
+.language {
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  color: #9c9c9c;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 99;
+  padding-right: 4rem;
+  
+    a {
+      color: #9c9c9c;
+    }
+}
+
+.selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.5rem;
+  position: fixed;
+  background-color: white;
+  color: #114991;
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding-left: 2rem;
 }
 
 .center {
@@ -95,7 +130,17 @@ nav a {
   display: none;
 }
 
+.current {
+  color: #114991;
+}
 
+nav .language a.current {
+  color: #114991;
+}
+
+nav .language a {
+  color: #9c9c9c;
+}
 
 @media screen and (max-width: 700px) {
 
