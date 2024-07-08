@@ -66,9 +66,9 @@
   }
 
   .project {
+    justify-content: center;
     gap: 0;
     width: 100dvw;
-    justify-content: center;
   }
 
   .container-year,
@@ -86,6 +86,11 @@
 
 .container-index {
   width: 50px;
+}
+
+.sort-buttons {
+  gap: 0;
+  justify-content: center;
 }
 
 }
