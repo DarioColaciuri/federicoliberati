@@ -13,6 +13,7 @@ const NavBar = () => {
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
+    setShowMenu(false);
   };
 
 //

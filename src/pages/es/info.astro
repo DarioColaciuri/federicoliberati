@@ -7,29 +7,27 @@ import NavFootES from "../../layouts/NavFootES.astro";
     <div class="container">
       <div class="container-menu">
         <h3 class="info">INFO,</h3>
-        <a href="/es/bio" class="bio-info"><h3 class="bio">BIO,</h3></a>
+        <a href="/es/bio" class="link-info"><h3 class="bio">BIO,</h3></a>
       </div>
-      <img src="/about.jpg" alt="federico liberati" />
+
       <div class="container-texto">
         <p class="text1">
-          I’m an Argentinian architect based in Buenos Aires & Barcelona. I’ve
-          started my solo practice in 2017, having worked in association with
-          other professionals throughout the years. I specialize on commercial &
-          gastronomic architecture aswell on private housing & refurbishments.
-          Each project is developed with site specific solutions and bespoke
-          furniture & objects, intending to portray a unique vision for each of
-          them.
+          FEDERICO-LIBERATI es un estudio de arquitectura con base en Buenos Aires, ARG y Barcelona, ESP.
         </p>
-        <p class="text2">
-          I was born in 1992 and obtained my Double Degree as an architect, with
-          Honor Diploma, at Universidad de Belgrano (AR) & Politecnico di Torino
-          (IT) in 2016. In 2022 I received a Master’s Degree on BIM Management
-          from the Polythecnic University of Catalunya (ES).
+        <p class="text1">
+          Establecido en 2017, nos especializamos en el desarrollo de proyectos residenciales, comerciales y gastronómicos, trabajando siempre bajo la metodología BIM.
         </p>
-        <p class="text3">
-          I have also worked as a teacher and researcher at Universidad de
-          Belgrano (2013-2021).
-        </p>
+        <p class="text1">
+          Cada proyecto se realiza con soluciones específicas según el sitio, economía y necesidad del cliente, dando así una identidad única a cada uno.
+        <p class="text1">Nuestros servicios abarcan:</p>
+        <div class="list-container">
+          <div class="text1">- Desarrollo conceptual del proyecto</div>
+          <div class="text1">
+            - Armado de proyecto ejecutivo.
+          </div>
+          <div class="text1">- Confección de modelos BIM para garantizar anticipadamente el control de problemas en obra y del presupuesto.</div>
+          <div class="text1">- Dirección y gestión de obra.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -50,6 +48,11 @@ import NavFootES from "../../layouts/NavFootES.astro";
     line-height: 0.01;
   }
 
+  .link-info {
+    text-decoration: none;
+    color: #9c9c9c;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -58,17 +61,17 @@ import NavFootES from "../../layouts/NavFootES.astro";
     gap: 2rem;
   }
 
-  .bio {
-    color:#9c9c9c;
-    text-decoration: none;
+  .info {
+    color:rgb(0, 0, 0);
   }
 
-  .bio-info {
+  .link-info {
     text-decoration: none;
   }
 
   .container-texto {
-    width: 30vw;
+    margin-left: 2rem;
+    width: 50vw;
   }
 
   .text1 {
