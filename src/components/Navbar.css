@@ -216,6 +216,12 @@ nav .language a {
     width: 90px;
   }
 
+  .selector, .language {
+    margin-bottom: 2rem;
+  }
+
+
+
 }
 
 
