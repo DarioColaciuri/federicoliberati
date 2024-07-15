@@ -5,26 +5,32 @@ import NavFootES from "../../layouts/NavFootES.astro";
 <NavFootES title="Federico-Liberati">
   <div class="container-gral">
     <div class="container">
-        <h1 class="title">CONTACTO,</h1>
+      <h1 class="title">CONTACTO,</h1>
     </div>
     <div class="container-contact">
-      <h2>M</h2>
-      <p>info@federico-liberati.com</p>
-      <h2>Instagram</h2>
-      <p>@federico__liberati</p>
-      <h2>Linkedin</h2>
-      <p>federico-liberati</p>
+      <div class="container1">
+        <p>M</p>
+        <p>info@federico-liberati.com</p>
+      </div>
+      <div class="container2">
+        <p>Instagram</p>
+        <p>@federico__liberati</p>
+      </div>
+      <div class="container3">
+        <p>Linkedin</p>
+        <p>federico-liberati</p>
+      </div>
     </div>
   </div>
 </NavFootES>
 
 <style>
-      .title {
-  text-align: start;
-  margin-left: 1rem;
-  font-family: NimbusSans;
-  font-weight: 100;
-  font-size: 3rem;
+  .title {
+    text-align: start;
+    margin-left: 2rem;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
   }
 
   .container-contact {
@@ -38,9 +44,7 @@ import NavFootES from "../../layouts/NavFootES.astro";
   @media screen and (max-width: 700px) {
     .container-contact {
       width: 100vw;
-      padding-left: 0;
-      justify-content: center;
-      align-items: center;
+      padding-left: 16rem;
     }
   }
 </style>

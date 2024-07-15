@@ -9,17 +9,19 @@ import NavFoot from "../layouts/NavFoot.astro";
         <a href="/info" class="link-info"><h3>INFO,</h3></a>
         <h3 class="bio">BIO,</h3>
       </div>
-      <img src="/about.jpg" alt="federico liberati" />
-      <div class="container-texto">
-        <p class="text1">
-          Federico Liberati (1992) is an Argentinean architect. He studied
-          architecture in Buenos Aires & Torino and holds a Master in Open BIM
-          from the Polythecnic University of Catalonia, Spain (2023).
-        </p>
-        <p class="text1">
-          He also worked as a researcher & teacher at Universidad de Belgrano,
-          ARG & as an editor at -NESS Magazine.
-        </p>
+      <div class="container-info">
+        <img class="img" src="/about.jpg" alt="federico liberati" />
+        <div class="container-texto">
+          <p class="text1">
+            Federico Liberati (1992) is an Argentinean architect. He studied
+            architecture in Buenos Aires & Torino and holds a Master in Open BIM
+            from the Polythecnic University of Catalonia, Spain (2023).
+          </p>
+          <p class="text1">
+            He also worked as a researcher & teacher at Universidad de Belgrano,
+            ARG & as an editor at -NESS Magazine.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -29,7 +31,6 @@ import NavFoot from "../layouts/NavFoot.astro";
   .container-gral {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .container-menu {
@@ -40,21 +41,46 @@ import NavFoot from "../layouts/NavFoot.astro";
     line-height: 0.01;
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    gap: 2rem;
-  }
-
   .link-info {
     text-decoration: none;
     color: #9c9c9c;
   }
 
+  .img {
+    height: 30rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+  }
+
+  .info {
+    color: rgb(0, 0, 0);
+  }
+
+  .container-menu {
+    text-align: start;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .link-info {
+    text-decoration: none;
+  }
+
+  .container-info {
+    display: flex;
+    gap: 3rem;
+  }
+
   .container-texto {
-    width: 30vw;
+    width: 500px;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
+    font-size: 1.1rem;
   }
 
   .text1 {
@@ -68,14 +94,16 @@ import NavFoot from "../layouts/NavFoot.astro";
 
   @media screen and (max-width: 700px) {
     .container-texto {
-      width: 70vw;
+      width: 90vw;
     }
 
     .container-menu {
-      height: 10dvh;
+      height: 5dvh;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 2rem;
       margin-top: 2rem;
+      margin-bottom: 4rem;
       width: 50vh;
     }
   }

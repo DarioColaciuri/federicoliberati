@@ -1,13 +1,14 @@
 .index {
   line-height: 0.4rem;
   font-family: NimbusSans;
-  margin-left: 15.3rem;
+  margin-left: 13rem;
 }
 
 .sort-buttons {
   display: flex;
-  margin-left: 15rem;
+  margin-left: 13rem;
   gap: 4rem;
+  width: 700px;
 }
 
 .button {
@@ -31,7 +32,7 @@
 }
 
 #project {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -48,10 +49,10 @@
 }
 
 .index-img {
-  width: 10rem;
+  width: 15rem;
   position: absolute;
   right: 10%;
-  top: 120%;
+  top: 40%;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

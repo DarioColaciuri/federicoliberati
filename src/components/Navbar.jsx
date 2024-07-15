@@ -5,73 +5,101 @@ import Menu from "./svg/Menu";
 import Close from "./svg/Close";
 import Back from "./svg/Back";
 import LogoAzul from "./svg/LogoAzul";
+import Isologo from "./svg/Isologo";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
   const [showMenu, setShowMenu] = useState(false);
-
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
     setShowMenu(false);
   };
 
-//
- //useEffect(() => {
-//    if (showMenu) {
-//      document.body.classList.add("no-scroll");
-//    } else {
-//      document.body.classList.remove("no-scroll");
-//    }
-//  }, [showMenu]);
-
-const handleLanguageSwitch = (lang) => {
-  if (lang === 'ES') {
-    const currentPath = window.location.pathname;
-    const newPath = `/es${currentPath}`;
-    window.location.href = newPath;
-  }
-};
+  const handleLanguageSwitch = (lang) => {
+    if (lang === "ES") {
+      const currentPath = window.location.pathname;
+      const newPath = `/es${currentPath}`;
+      window.location.href = newPath;
+    }
+  };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   const handleBackClick = (event) => {
-    event.preventDefault(); 
-    window.history.back(); 
+    event.preventDefault();
+    window.history.back();
   };
 
   return (
-    <nav className="nav">
+    <nav className={`nav ${!showMenu ? 'blend-mode-difference' : ''}`}>
       <div className="nav-content">
         <a className="nav-back" href="#" onClick={handleBackClick}>
           <Back />
         </a>
         <a className="nav-logo-cel" href="/main">
-          <img className="isologo" src="/isologo.png" alt="isologo" />
+          {/* <img className="isologo" src="/isologo.png" alt="isologo" /> */}
+          <Isologo />
         </a>
         <a className="nav-logo" id="main" href="/main">
-          {showMenu ? <LogoAzul /> : <Logo />}
+          <Logo />
         </a>
         <div className="nav-menu">
           <button className="menu" onClick={toggleMenu}>
-            {showMenu ? <Close /> : <Menu />}
+            <Menu />
           </button>
         </div>
       </div>
       {showMenu && (
-        <div className="dropdown-menu">
-          <div className="selector">
-          <a href="/projects" onClick={() => handleLinkClick('link1')} className={activeLink === 'link1' ? 'active' : ''}>PROJECTS,</a>
-          <a href="/info" onClick={() => handleLinkClick('link2')} className={activeLink === 'link2' ? 'active' : ''}>INFO,</a>
-          <a href="/contact" onClick={() => handleLinkClick('link3')} className={activeLink === 'link3' ? 'active' : ''}>CONTACT,</a>
+        <>
+          <div className="nav-content-new">
+            <a className="nav-logo-new" id="main" href="/main">
+              {showMenu ? <LogoAzul /> : ""}
+            </a>
           </div>
-          <div className="language">
-            <a href="#" onClick={() => handleLanguageSwitch('ES')}>ES</a>/<a className="current" href="">EN</a>
-          </div>
+          <div className="dropdown-menu">
+            <div className="nav-menu-new">
+              <button className="menu-new" onClick={toggleMenu}>
+                {showMenu ? <Close /> : ""}
+              </button>
+            </div>
 
-        </div>
+            <div className="selector">
+              <a
+                href="/projects"
+                onClick={() => handleLinkClick("link1")}
+                className={activeLink === "link1" ? "active" : ""}
+              >
+                PROJECTS,
+              </a>
+              <a
+                href="/info"
+                onClick={() => handleLinkClick("link2")}
+                className={activeLink === "link2" ? "active" : ""}
+              >
+                INFO,
+              </a>
+              <a
+                href="/contact"
+                onClick={() => handleLinkClick("link3")}
+                className={activeLink === "link3" ? "active" : ""}
+              >
+                CONTACT,
+              </a>
+            </div>
+            <div className="language">
+              <a href="#" onClick={() => handleLanguageSwitch("ES")}>
+                ES
+              </a>
+              /
+              <a className="current" href="">
+                EN
+              </a>
+            </div>
+          </div>
+        </>
       )}
     </nav>
   );

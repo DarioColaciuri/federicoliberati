@@ -4,8 +4,8 @@ const Back = () => {
         xmlns="http://www.w3.org/2000/svg"
         width="25"
         height="25"
-        fill="#000000"
-        class="bi bi-chevron-left center"
+        fill="#ffffff"
+        className="bi bi-chevron-left center"
         viewBox="0 0 16 16"
       >
         <path

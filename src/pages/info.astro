@@ -59,13 +59,19 @@ import NavFoot from "../layouts/NavFoot.astro";
   .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 90vw;
-    gap: 2rem;
   }
 
   .info {
     color: rgb(0, 0, 0);
+  }
+
+  .container-menu {
+    text-align: start;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
   }
 
   .link-info {
@@ -73,8 +79,8 @@ import NavFoot from "../layouts/NavFoot.astro";
   }
 
   .container-texto {
-    margin-left: 2rem;
-    width: 50vw;
+    width: 58.5vw;
+    font-size: 1.1rem;
   }
 
   .text1 {
@@ -92,10 +98,12 @@ import NavFoot from "../layouts/NavFoot.astro";
     }
 
     .container-menu {
-      height: 10dvh;
+      height: 5dvh;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 2rem;
       margin-top: 2rem;
+      margin-bottom: 4rem;
       width: 50vh;
     }
   }

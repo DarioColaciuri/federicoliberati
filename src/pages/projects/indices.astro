@@ -8,10 +8,10 @@ import Arrow from "../../components/svg/Arrow"
 <NavFoot title="Federico-Liberati">
   <div class="title-container">
     <h1 class="title">INDEX,</h1>
-    <a class="arrow" href="#project"><Arrow /> </a>
+    <!-- <a class="arrow" href="#project"><Arrow /> </a> -->
     </div>
   <div class="containergral">
-  <SubmenuLayout />
+  <!-- <SubmenuLayout /> -->
 </div>
 <IndexList transition:persist client:only="react" />
 </NavFoot>
@@ -30,24 +30,25 @@ import Arrow from "../../components/svg/Arrow"
 
   .title {
   text-align: start;
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-family: NimbusSans;
   font-weight: 100;
+  padding-left: 2rem;
   font-size: 3rem;
   }
 
   .title-container {
     display: flex;
     flex-direction: column;
-    height: 90dvh;
-    justify-content: end;
+    /* height: 90dvh;
+    justify-content: end; */
   }
 
-  .arrow {
+  /* .arrow {
     display: flex;
     justify-content: center;
     margin-top: -2rem;
     margin-bottom: 5rem;
-  }
+  } */
 
 </style>

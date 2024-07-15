@@ -6,13 +6,12 @@ nav {
   align-items: center;
   font-size: normal;
   z-index: 2;
-  /* mix-blend-mode: difference; */
   padding-top: 0.3rem;
   font-family: NimbusSans;
   font-weight: 100;
   font-size: 3rem;
   background-color: transparent;
-  z-index: 98;
+  z-index: 95;
 }
 
 nav a {
@@ -30,7 +29,7 @@ nav a {
   align-items: center;
   background-color: transparent;
   border: none;
-  z-index: 99;
+  z-index: 96;
   cursor: url('/cursor.png'), auto;
 }
 
@@ -49,25 +48,44 @@ nav a {
 #logocel {
   display: none;
 }
+
 .nav-content {
   display: flex;
+  mix-blend-mode: difference;
+  background-color: transparent;
   align-items: center;
   height: 5rem;
   justify-content: center;
 }
 
+.blend-mode-difference {
+  mix-blend-mode: difference;
+}
+
 .nav-logo {
   display: flex;
   width: 60vw;
-  justify-content: right;
-  z-index: 99;
+  justify-content: center;
+  z-index: 96;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 8;
+  right: 0;
   width: 30vw;
   justify-content: right;
+  margin-right: 2rem;
+  z-index: 96;
+}
+
+.nav-back {
+  position: fixed;
+  top: 8;
+  left: 0;
+  margin-left: 2rem;
 }
 
 .no-scroll {
@@ -87,6 +105,51 @@ nav a {
   bottom: 0;
   left: 0;
   padding: 1rem;
+  z-index: 97;
+}
+
+.nav-content-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-top: .3rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5rem;
+  z-index: 98;
+  pointer-events: none;
+}
+
+.nav-logo-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 98;
+}
+
+.nav-menu-new {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  justify-content: right;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  z-index: 98;
+}
+
+.menu-new {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  z-index: 99;
+  cursor: url('/cursor.png'), auto;
 }
 
 .language {
@@ -97,8 +160,8 @@ nav a {
   bottom: 0;
   right: 0;
   padding: 1rem;
-  z-index: 99;
-  padding-right: 4rem;
+  z-index: 98;
+  padding-right: 2.5rem;
   
     a {
       color: #9c9c9c;
@@ -142,6 +205,9 @@ nav .language a {
   color: #9c9c9c;
 }
 
+
+
+
 @media screen and (max-width: 700px) {
 
   .menu {
@@ -156,6 +222,10 @@ nav .language a {
     width: 100vw;
     margin: 0 30px 0 30px;
     justify-content: space-between;
+  }
+
+  .nav-menu {
+    margin-top: 2.5rem;
   }
 
   .nav-back {
@@ -177,6 +247,7 @@ nav .language a {
 
   .close {
     margin-top: .6rem;
+
   }
 
   #projects {
@@ -211,16 +282,19 @@ nav .language a {
     z-index: 1;
   }
 
+  .nav-logo-cel {
+    z-index: 99;
+  }
+
   .isologo {
     display: flex;
-    width: 90px;
+    margin-top: 3rem;
+    width: 150px;
   }
 
   .selector, .language {
     margin-bottom: 2rem;
   }
-
-
 
 }
 

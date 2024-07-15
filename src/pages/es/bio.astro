@@ -9,14 +9,21 @@ import NavFootES from "../../layouts/NavFootES.astro";
         <a href="/es/info" class="link-info"><h3>INFO,</h3></a>
         <h3 class="bio">BIO,</h3>
       </div>
-      <img src="/about.jpg" alt="federico liberati" />
-      <div class="container-texto">
-        <p class="text1">
-          Federico Liberati (1992) es un arquitecto por la Universidad de Belgrano, ARG y el Politecnico di Torino, ITA (2016). Es también Magister en Open BIM por la Universidad Politécnica de Catalunya, ESP (2023).
-        </p>
-        <p class="text1">
-          A lo largo de su carrera ha colaborado con distintos profesionales, habiendo trabajado también como docente e investigador en la Universidad de Belgrano y como editor en la revista -NESS Magazine.
-        </p>
+      <div class="container-info">
+        <img class="img" src="/about.jpg" alt="federico liberati" />
+        <div class="container-texto">
+          <p class="text1">
+            Federico Liberati (1992) es un arquitecto por la Universidad de
+            Belgrano, ARG y el Politecnico di Torino, ITA (2016). Es también
+            Magister en Open BIM por la Universidad Politécnica de Catalunya,
+            ESP (2023).
+          </p>
+          <p class="text1">
+            A lo largo de su carrera ha colaborado con distintos profesionales,
+            habiendo trabajado también como docente e investigador en la
+            Universidad de Belgrano y como editor en la revista -NESS Magazine.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -26,7 +33,6 @@ import NavFootES from "../../layouts/NavFootES.astro";
   .container-gral {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .container-menu {
@@ -42,48 +48,65 @@ import NavFootES from "../../layouts/NavFootES.astro";
     color: #9c9c9c;
   }
 
+  .img {
+    height: 30rem;
+  }
+
   .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 90vw;
-    gap: 2rem;
   }
 
-  .bio {
-    color:#000000;
+  .info {
+    color: rgb(0, 0, 0);
+  }
+
+  .container-menu {
+    text-align: start;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .link-info {
     text-decoration: none;
   }
 
-  .bio-info {
-    text-decoration: none;
+  .container-info {
+    display: flex;
+    gap: 3rem;
   }
 
   .container-texto {
-    width: 30vw;
+    width: 500px;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
+    font-size: 1.1rem;
   }
 
   .text1 {
     font-family: NimbusSans;
   }
 
-  .text2, .text3 {
+  .text2,
+  .text3 {
     font-family: Freight;
   }
 
   @media screen and (max-width: 700px) {
-
     .container-texto {
-      width: 70vw;
+      width: 90vw;
     }
 
     .container-menu {
-      height: 10dvh;
+      height: 5dvh;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 2rem;
       margin-top: 2rem;
+      margin-bottom: 4rem;
       width: 50vh;
     }
-
-}
+  }
 </style>

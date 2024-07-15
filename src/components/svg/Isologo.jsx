@@ -1,18 +1,19 @@
 import React from "react";
 
-const Prueba = () => {
+const Isologo = () => {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="70px"
-      height="70px"
+      width="10rem"
+      height="10rem"
       viewBox="0 0 2334.000000 2334.000000"
       preserveAspectRatio="xMidYMid meet"
+      className="isologo"
     >
       <g
         transform="translate(0.000000,2334.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        fill="#ffffff"
         stroke="none"
       >
         <path
@@ -241,4 +242,4 @@ l33 66 370 -194 c204 -107 373 -191 376 -187 12 13 219 410 219 420 0 5 -141
   );
 };
 
-export default Prueba;
+export default Isologo;
