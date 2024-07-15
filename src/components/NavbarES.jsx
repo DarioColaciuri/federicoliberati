@@ -60,6 +60,8 @@ const NavBarES = () => {
     }, 0);
   };
 
+  const isSpanishPath = window.location.pathname.startsWith("/es");
+
   return (
     <nav className={`nav ${!showMenu ? 'blend-mode-difference' : ''}`}>
       <div className="nav-content">
@@ -95,21 +97,21 @@ const NavBarES = () => {
 
             <div className="selector">
               <a
-                href="es/projects"
+                href={`${isSpanishPath ? '' : 'es/'}projects`}
                 onClick={() => handleLinkClick("link1")}
                 className={activeLink === "link1" ? "active" : ""}
               >
                 OBRAS,
               </a>
               <a
-                href="es/info"
+                href={`${isSpanishPath ? '' : 'es/'}info`}
                 onClick={() => handleLinkClick("link2")}
                 className={activeLink === "link2" ? "active" : ""}
               >
                 INFO,
               </a>
               <a
-                href="es/contact"
+                href={`${isSpanishPath ? '' : 'es/'}contact`}
                 onClick={() => handleLinkClick("link3")}
                 className={activeLink === "link3" ? "active" : ""}
               >
@@ -117,8 +119,8 @@ const NavBarES = () => {
               </a>
             </div>
             <div className="language">
-            <a className="current" href="">ES</a>/<a href="#" onClick={() => handleLanguageSwitch('EN')}>EN</a>
-          </div>
+              <a className="current" href="">ES</a>/<a href="#" onClick={() => handleLanguageSwitch('EN')}>EN</a>
+            </div>
           </div>
         </>
       )}
