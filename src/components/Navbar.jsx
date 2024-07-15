@@ -24,6 +24,19 @@ const NavBar = () => {
     }
   };
 
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.includes("/projects")) {
+      setActiveLink("link1");
+    } else if (path.includes("/info")) {
+      setActiveLink("link2");
+    } else if (path.includes("/contact")) {
+      setActiveLink("link3");
+    } else {
+      setActiveLink("");
+    }
+  }, []);
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -31,6 +44,18 @@ const NavBar = () => {
   const handleBackClick = (event) => {
     event.preventDefault();
     window.history.back();
+    setTimeout(() => {
+      const path = window.location.pathname;
+      if (path.includes("/projects")) {
+        setActiveLink("link1");
+      } else if (path.includes("/info")) {
+        setActiveLink("link2");
+      } else if (path.includes("/contact")) {
+        setActiveLink("link3");
+      } else {
+        setActiveLink("");
+      }
+    }, 0);
   };
 
   return (

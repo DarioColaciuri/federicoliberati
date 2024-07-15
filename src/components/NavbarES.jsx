@@ -5,6 +5,7 @@ import Menu from "./svg/Menu";
 import Close from "./svg/Close";
 import Back from "./svg/Back";
 import LogoAzul from "./svg/LogoAzul";
+import Isologo from "./svg/Isologo";
 
 const NavBarES = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -25,6 +26,19 @@ const NavBarES = () => {
     }
   };
 
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.includes("/projects")) {
+      setActiveLink("link1");
+    } else if (path.includes("/info")) {
+      setActiveLink("link2");
+    } else if (path.includes("/contact")) {
+      setActiveLink("link3");
+    } else {
+      setActiveLink("");
+    }
+  }, []);
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -32,6 +46,18 @@ const NavBarES = () => {
   const handleBackClick = (event) => {
     event.preventDefault();
     window.history.back();
+    setTimeout(() => {
+      const path = window.location.pathname;
+      if (path.includes("/projects")) {
+        setActiveLink("link1");
+      } else if (path.includes("/info")) {
+        setActiveLink("link2");
+      } else if (path.includes("/contact")) {
+        setActiveLink("link3");
+      } else {
+        setActiveLink("");
+      }
+    }, 0);
   };
 
   return (
@@ -41,7 +67,8 @@ const NavBarES = () => {
           <Back />
         </a>
         <a className="nav-logo-cel" href="es/main">
-          <img className="isologo" src="/isologo.png" alt="isologo" />
+          {/* <img className="isologo" src="/isologo.png" alt="isologo" /> */}
+          <Isologo />
         </a>
         <a className="nav-logo" id="main" href="es/main">
           <Logo />

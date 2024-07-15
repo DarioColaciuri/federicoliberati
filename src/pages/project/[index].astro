@@ -24,7 +24,7 @@ export function getStaticPaths() {
   <div class="project-container">
     <Carousel transition:persist project={project} />
     {project.title && <h1 class="titulo">{project.title}</h1>}
-    <a href="#project"><Arrow /></a>
+    <a class="arrow" href="#project"><Arrow /></a>
   </div>
   <div class="color">
     <div class="info-container">
@@ -164,6 +164,7 @@ export function getStaticPaths() {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     justify-content: center;
     height: 90dvh;
   }
@@ -208,7 +209,7 @@ export function getStaticPaths() {
     font-family: NimbusSans;
     font-weight: lighter;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-top: -1rem;
   }
 
   .color {
@@ -225,6 +226,10 @@ export function getStaticPaths() {
   .container2 {
     display: flex;
     flex-direction: column;
+  }
+
+  .arrow {
+    margin-top: -1rem
   }
 
   @media screen and (max-width: 700px) {
