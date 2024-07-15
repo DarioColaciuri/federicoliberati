@@ -95,21 +95,21 @@ const NavBarES = () => {
 
             <div className="selector">
               <a
-                href="es/projects"
+                href="/projects"
                 onClick={() => handleLinkClick("link1")}
                 className={activeLink === "link1" ? "active" : ""}
               >
                 OBRAS,
               </a>
               <a
-                href="es/info"
+                href="/info"
                 onClick={() => handleLinkClick("link2")}
                 className={activeLink === "link2" ? "active" : ""}
               >
                 INFO,
               </a>
               <a
-                href="es/contact"
+                href="/contact"
                 onClick={() => handleLinkClick("link3")}
                 className={activeLink === "link3" ? "active" : ""}
               >
