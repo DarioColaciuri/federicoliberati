@@ -6,7 +6,7 @@ import NavFoot from "../layouts/NavFoot.astro";
   <div class="container-gral">
     <div class="container">
       <div class="container-menu">
-        <a href="/info" class="link-info"><h3>INFO,</h3></a>
+        <a href="/info" class="link-info"><h3 class="infor">INFO,</h3></a>
         <h3 class="bio">BIO,</h3>
       </div>
       <div class="container-info">
@@ -46,6 +46,18 @@ import NavFoot from "../layouts/NavFoot.astro";
     color: #9c9c9c;
   }
 
+  .infor {
+    color: #9c9c9c;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .bio {
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
+  }
+
   .img {
     height: 30rem;
   }
@@ -58,6 +70,9 @@ import NavFoot from "../layouts/NavFoot.astro";
 
   .info {
     color: rgb(0, 0, 0);
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
   }
 
   .container-menu {
@@ -72,7 +87,10 @@ import NavFoot from "../layouts/NavFoot.astro";
   }
 
   .container-info {
+    flex-wrap: wrap;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 3rem;
   }
 
@@ -98,11 +116,10 @@ import NavFoot from "../layouts/NavFoot.astro";
     }
 
     .container-menu {
-      height: 5dvh;
-      flex-direction: row;
+      height: 10dvh;
+      flex-direction: column;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      margin-top: 7rem;
       margin-bottom: 4rem;
       width: 50vh;
     }

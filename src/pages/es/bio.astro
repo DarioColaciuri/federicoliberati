@@ -48,6 +48,18 @@ import NavFootES from "../../layouts/NavFootES.astro";
     color: #9c9c9c;
   }
 
+  .infor {
+    color: #9c9c9c;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .bio {
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
+  }
+
   .img {
     height: 30rem;
   }
@@ -60,6 +72,9 @@ import NavFootES from "../../layouts/NavFootES.astro";
 
   .info {
     color: rgb(0, 0, 0);
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
   }
 
   .container-menu {
@@ -74,7 +89,10 @@ import NavFootES from "../../layouts/NavFootES.astro";
   }
 
   .container-info {
+    flex-wrap: wrap;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 3rem;
   }
 
@@ -100,11 +118,10 @@ import NavFootES from "../../layouts/NavFootES.astro";
     }
 
     .container-menu {
-      height: 5dvh;
-      flex-direction: row;
+      height: 10dvh;
+      flex-direction: column;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      margin-top: 7rem;
       margin-bottom: 4rem;
       width: 50vh;
     }

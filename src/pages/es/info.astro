@@ -40,75 +40,91 @@ import NavFootES from "../../layouts/NavFootES.astro";
   </div>
 
   <style>
-    .container-gral {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .container-gral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .container-menu {
-      display: flex;
-      flex-direction: column;
-      height: 70dvh;
-      font-family: NimbusSans;
-      line-height: 0.01;
-    }
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    height: 70dvh;
+    font-family: NimbusSans;
+    line-height: 0.01;
+  }
 
-    .link-info {
-      text-decoration: none;
-      color: #9c9c9c;
-    }
+  .link-info {
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
+    color: #9c9c9c;
+  }
 
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+  }
+
+  .info {
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+  }
+
+  .container-menu {
+    text-align: start;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .link-info {
+    text-decoration: none;
+  }
+
+  .container-texto {
+    width: 58.5vw;
+    font-size: 1.1rem;
+  }
+
+  .text1 {
+    font-family: NimbusSans;
+  }
+
+  .text2,
+  .text3 {
+    font-family: Freight;
+  }
+
+  .bio {
+    font-weight: 100;
+    font-size: 3rem;
+    font-family: NimbusSans;
+  }
+
+  @media screen and (max-width: 700px) {
+    .container-texto {
       width: 90vw;
     }
 
-    .info {
-      color: rgb(0, 0, 0);
-    }
+    .container {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 90vw;
+  }
 
     .container-menu {
-      text-align: start;
-      font-family: NimbusSans;
-      font-weight: 100;
-      font-size: 3rem;
+      height: 10dvh;
+      flex-direction: column;
+      margin-top: 2rem;
+      margin-bottom: 7rem;
     }
-
-    .link-info {
-      text-decoration: none;
-    }
-
-    .container-texto {
-      width: 58.5vw;
-      font-size: 1.1rem;
-    }
-
-    .text1 {
-      font-family: NimbusSans;
-    }
-
-    .text2,
-    .text3 {
-      font-family: Freight;
-    }
-
-    @media screen and (max-width: 700px) {
-      .container-texto {
-        width: 90vw;
-      }
-
-      .container-menu {
-        height: 5dvh;
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        width: 50vh;
-      }
-    }
+  }
   </style></NavFootES
 >
