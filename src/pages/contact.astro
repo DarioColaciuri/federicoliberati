@@ -1,13 +1,15 @@
 ---
 import NavFoot from "../layouts/NavFoot.astro";
+import Arrow from "../components/svg/Arrow";
 ---
 
 <NavFoot title="Federico-Liberati">
+  <div class="title-container">
+    <h1 class="title">CONTACT,</h1>
+    <a class="arrow" href="#contact"><Arrow /> </a>
+  </div>
   <div class="container-gral">
-    <div class="container">
-      <h1 class="title">CONTACT,</h1>
-    </div>
-    <div class="container-contact">
+    <div id="contact" class="container-contact">
       <div class="container1">
         <p>M</p>
         <p>info@federico-liberati.com</p>
@@ -25,6 +27,11 @@ import NavFoot from "../layouts/NavFoot.astro";
 </NavFoot>
 
 <style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
   .title {
     text-align: start;
     margin-left: 2rem;
@@ -39,12 +46,42 @@ import NavFoot from "../layouts/NavFoot.astro";
     padding-left: 18rem;
     line-height: 0.01;
     font-family: NimbusSans;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+  text-align: start;
+  margin-left: 2rem;
+  font-family: NimbusSans;
+  font-weight: 100;
+  font-size: 3rem;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    height: 90dvh;
+    justify-content: end;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
   }
 
   @media screen and (max-width: 700px) {
     .container-contact {
-      width: 100vw;
-      padding-left: 16rem;
+      padding-left: 0rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container-gral {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 </style>
