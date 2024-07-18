@@ -1,14 +1,18 @@
 ---
 import NavFoot from "../layouts/NavFoot.astro";
+import Arrow from "../components/svg/Arrow";
 ---
 
 <NavFoot title="Federico-Liberati">
-  <div class="container-gral">
+  <div class="title-container">
+    <div class="titulos">
+      <a href="/info" class="link-info"><h3 class="infor">INFO,</h3></a>
+      <h3 class="bio">BIO,</h3>
+    </div>
+    <a class="arrow" href="#bio"><Arrow /> </a>
+  </div>
+  <div id="bio" class="container-gral">
     <div class="container">
-      <div class="container-menu">
-        <a href="/info" class="link-info"><h3 class="infor">INFO,</h3></a>
-        <h3 class="bio">BIO,</h3>
-      </div>
       <div class="container-info">
         <img class="img" src="/about.jpg" alt="federico liberati" />
         <div class="container-texto">
@@ -28,9 +32,47 @@ import NavFoot from "../layouts/NavFoot.astro";
 </NavFoot>
 
 <style>
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  .titulos {
+    display: flex;
+    text-align: start;
+    margin-left: 2rem;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+    gap: 2rem;
+  }
+
+  .title {
+    text-align: start;
+    margin-left: 2rem;
+    font-family: NimbusSans;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    height: 90dvh;
+    justify-content: end;
+    margin-top: 1rem;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+  }
   .container-gral {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .container-menu {
@@ -62,10 +104,13 @@ import NavFoot from "../layouts/NavFoot.astro";
     height: 30rem;
   }
 
+
   .container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     width: 90vw;
+    margin-bottom: 4rem;
   }
 
   .info {
@@ -112,16 +157,11 @@ import NavFoot from "../layouts/NavFoot.astro";
 
   @media screen and (max-width: 700px) {
     .container-texto {
-      width: 90vw;
+      width: 60vw;
     }
 
-    .container-menu {
-      height: 10dvh;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 7rem;
-      margin-bottom: 4rem;
-      width: 50vh;
+    .title-container {
+      margin-top: 3rem;
     }
   }
 </style>
