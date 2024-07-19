@@ -62,17 +62,25 @@ const NavBarES = () => {
 
   const isSpanishPath = window.location.pathname.startsWith("/es");
 
+  const getLinkPath = (path) => {
+    const currentPath = window.location.pathname;
+    if (isSpanishPath) {
+      return `/es${path}`;
+    } else {
+      return path;
+    }
+  };
+
   return (
     <nav className={`nav ${!showMenu ? 'blend-mode-difference' : ''}`}>
       <div className="nav-content">
         <a className="nav-back" href="#" onClick={handleBackClick}>
           <Back />
         </a>
-        <a className="nav-logo-cel" href="es/main">
-          {/* <img className="isologo" src="/isologo.png" alt="isologo" /> */}
+        <a className="nav-logo-cel" href="/es/main">
           <Isologo />
         </a>
-        <a className="nav-logo" id="main" href="es/main">
+        <a className="nav-logo" id="main" href="/es/main">
           <Logo />
         </a>
         <div className="nav-menu">
@@ -84,7 +92,7 @@ const NavBarES = () => {
       {showMenu && (
         <>
           <div className="nav-content-new">
-            <a className="nav-logo-new" id="main" href="es/main">
+            <a className="nav-logo-new" id="main" href="/es/main">
               {showMenu ? <LogoAzul /> : ""}
             </a>
           </div>
@@ -97,21 +105,21 @@ const NavBarES = () => {
 
             <div className="selector">
               <a
-                href={`${isSpanishPath ? '' : 'es/'}projects`}
+                href={getLinkPath("/projects")}
                 onClick={() => handleLinkClick("link1")}
                 className={activeLink === "link1" ? "active" : ""}
               >
                 OBRAS,
               </a>
               <a
-                href={`${isSpanishPath ? '' : 'es/'}info`}
+                href={getLinkPath("/info")}
                 onClick={() => handleLinkClick("link2")}
                 className={activeLink === "link2" ? "active" : ""}
               >
                 INFO,
               </a>
               <a
-                href={`${isSpanishPath ? '' : 'es/'}contact`}
+                href={getLinkPath("/contact")}
                 onClick={() => handleLinkClick("link3")}
                 className={activeLink === "link3" ? "active" : ""}
               >
