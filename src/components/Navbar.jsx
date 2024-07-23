@@ -11,19 +11,6 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleLinkClick = (id) => {
-    setActiveLink(id);
-    setShowMenu(false);
-  };
-
-  const handleLanguageSwitch = (lang) => {
-    if (lang === "ES") {
-      const currentPath = window.location.pathname;
-      const newPath = `/es${currentPath}`;
-      window.location.href = newPath;
-    }
-  };
-
   useEffect(() => {
     const path = window.location.pathname;
     if (path.includes("/projects")) {
@@ -35,10 +22,31 @@ const NavBar = () => {
     } else {
       setActiveLink("");
     }
+    const menuState = localStorage.getItem('showMenu') === 'true';
+    setShowMenu(menuState);
   }, []);
 
+  const handleLinkClick = (id) => {
+    setActiveLink(id);
+    setTimeout(() => {
+      setShowMenu(false);
+      localStorage.setItem('showMenu', false);
+    }, 200);
+  };
+
+  const handleLanguageSwitch = (lang) => {
+    localStorage.setItem('showMenu', true);
+    if (lang === "ES") {
+      const currentPath = window.location.pathname;
+      const newPath = `/es${currentPath}`;
+      window.location.href = newPath;
+    }
+  };
+
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    const newMenuState = !showMenu;
+    setShowMenu(newMenuState);
+    localStorage.setItem('showMenu', newMenuState);
   };
 
   const handleBackClick = (event) => {
@@ -65,7 +73,6 @@ const NavBar = () => {
           <Back />
         </a>
         <a className="nav-logo-cel" href="/main">
-          {/* <img className="isologo" src="/isologo.png" alt="isologo" /> */}
           <Isologo />
         </a>
         <a className="nav-logo" id="main" href="/main">

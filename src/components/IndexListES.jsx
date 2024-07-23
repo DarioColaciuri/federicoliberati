@@ -25,7 +25,7 @@ const IndexListES = () => {
       <div className="sort-buttons">
         <button className='container-year button' onClick={() => sortIndexes('year')}><p className='text-button'>A</p></button>
         <button className='container-index button' onClick={() => sortIndexes('index')}><p className='text-button'>I</p></button>
-        <button className='container-title button' onClick={() => sortIndexes('title')}><p className='text-button'>T</p></button>
+        <button className='container-title button' onClick={() => sortIndexes('title')}><p className='text-button'>N</p></button>
         <button className='container-type button' onClick={() => sortIndexes('type')}><p className='text-button'>T</p></button>
         <button className='container-status button' onClick={() => sortIndexes('status')}><p className='text-button'>E</p></button>
       </div>

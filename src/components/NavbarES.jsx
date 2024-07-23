@@ -11,21 +11,6 @@ const NavBarES = () => {
   const [activeLink, setActiveLink] = useState("");
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleLinkClick = (id) => {
-    setActiveLink(id);
-    setShowMenu(false);
-  };
-
-  const handleLanguageSwitch = (lang) => {
-    const currentPath = window.location.pathname;
-    if (lang === "EN") {
-      const newPath = currentPath.startsWith("/es")
-        ? currentPath.substring(3)
-        : currentPath;
-      window.location.href = newPath;
-    }
-  };
-
   useEffect(() => {
     const path = window.location.pathname;
     if (path.includes("/projects")) {
@@ -37,10 +22,31 @@ const NavBarES = () => {
     } else {
       setActiveLink("");
     }
+    const menuState = localStorage.getItem('showMenu') === 'true';
+    setShowMenu(menuState);
   }, []);
 
+  const handleLinkClick = (id) => {
+    setActiveLink(id);
+    setShowMenu(false);
+    localStorage.setItem('showMenu', false);
+  };
+
+  const handleLanguageSwitch = (lang) => {
+    localStorage.setItem('showMenu', true);
+    const currentPath = window.location.pathname;
+    if (lang === "EN") {
+      const newPath = currentPath.startsWith("/es")
+        ? currentPath.substring(3)
+        : currentPath;
+      window.location.href = newPath;
+    }
+  };
+
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    const newMenuState = !showMenu;
+    setShowMenu(newMenuState);
+    localStorage.setItem('showMenu', newMenuState);
   };
 
   const handleBackClick = (event) => {
@@ -127,7 +133,7 @@ const NavBarES = () => {
               </a>
             </div>
             <div className="language">
-              <a className="current" href="">ES</a>/<a href="#" onClick={() => handleLanguageSwitch('EN')}>EN</a>
+              <a className="current" href="#">ES</a>/<a href="#" onClick={() => handleLanguageSwitch('EN')}>EN</a>
             </div>
           </div>
         </>

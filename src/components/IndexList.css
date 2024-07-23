@@ -61,6 +61,46 @@
   opacity: 1;
 }
 
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .index {
+    font-size: 1.2rem; 
+    line-height: 1.2rem; 
+  }
+
+  .sort-buttons {
+    gap: 6rem;
+    width: 1500px;
+  }
+
+  .button {
+    font-size: 2rem; 
+  }
+
+  .project {
+    font-size: 1.2rem; 
+    gap: 6rem; 
+    width: 1500px;
+  }
+
+  .index-img {
+    width: 20rem; 
+    right: 0;
+    top: 0;
+  }
+
+  .container-year {
+    width: 12rem;
+  }
+
+  .container-title {
+    width: 16rem;
+  }
+
+  .container-type {
+    width: 16rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .index, .sort-buttons {
     margin-left: 0;
