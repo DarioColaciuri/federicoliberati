@@ -10,6 +10,7 @@ import Isologo from "./svg/Isologo";
 const NavBarES = () => {
   const [activeLink, setActiveLink] = useState("");
   const [showMenu, setShowMenu] = useState(false);
+  const [showBack, setShowBack] = useState(true);
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -24,6 +25,7 @@ const NavBarES = () => {
     }
     const menuState = localStorage.getItem('showMenu') === 'true';
     setShowMenu(menuState);
+    setShowBack(path !== "/es/main");
   }, []);
 
   const handleLinkClick = (id) => {
@@ -80,9 +82,11 @@ const NavBarES = () => {
   return (
     <nav className={`nav ${!showMenu ? 'blend-mode-difference' : ''}`}>
       <div className="nav-content">
-        <a className="nav-back" href="#" onClick={handleBackClick}>
-          <Back />
-        </a>
+        {showBack && (
+          <a className="nav-back" href="#" onClick={handleBackClick}>
+            <Back />
+          </a>
+        )}
         <a className="nav-logo-cel" href="/es/main">
           <Isologo />
         </a>
@@ -143,3 +147,4 @@ const NavBarES = () => {
 };
 
 export default NavBarES;
+
