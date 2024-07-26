@@ -61,7 +61,7 @@
   opacity: 1;
 }
 
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
+@media screen and (min-width: 1919px) {
   .index {
     font-size: 1.2rem; 
     line-height: 1.2rem; 
