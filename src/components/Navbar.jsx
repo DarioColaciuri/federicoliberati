@@ -28,19 +28,31 @@ const NavBar = () => {
     setShowBack(path !== "/main");
   }, []);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setShowMenu(false);
+    };
+
+    window.addEventListener("popstate", handleRouteChange);
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange);
+    };
+  }, []);
+
   const handleLinkClick = (id) => {
     setActiveLink(id);
-    setTimeout(() => {
-      setShowMenu(false);
-      localStorage.setItem('showMenu', false);
-    }, 200);
+    setShowMenu(false);
+    localStorage.setItem('showMenu', false);
   };
 
   const handleLanguageSwitch = (lang) => {
-    localStorage.setItem('showMenu', true);
     if (lang === "ES") {
       const currentPath = window.location.pathname;
       const newPath = `/es${currentPath}`;
+      window.location.href = newPath;
+    } else if (lang === "EN") {
+      const currentPath = window.location.pathname;
+      const newPath = currentPath.replace('/es', '');
       window.location.href = newPath;
     }
   };
@@ -130,7 +142,7 @@ const NavBar = () => {
                 ES
               </a>
               /
-              <a className="current" href="">
+              <a className="current" href="#" onClick={() => handleLanguageSwitch("EN")}>
                 EN
               </a>
             </div>

@@ -12,15 +12,21 @@ import Arrow from "../../components/svg/Arrow"
     <div id="contact" class="container-contact">
       <div class="container1">
         <p>M</p>
-        <p>info@federico-liberati.com</p>
+        <a class="link" href="mailto:federico-liberati@gmail.com">
+          <p>federico-liberati@gmail.com</p>
+        </a>
       </div>
       <div class="container2">
         <p>Instagram</p>
-        <p>@federico__liberati</p>
+        <a class="link" href="https://www.instagram.com/federico__liberati/" target="_blank" rel="noopener noreferrer">
+          <p>@federico__liberati</p>
+        </a>
       </div>
       <div class="container3">
         <p>Linkedin</p>
-        <p>federico-liberati</p>
+        <a class="link" href="https://www.linkedin.com/company/federico-liberati/" target="_blank" rel="noopener noreferrer">
+          <p>federico-liberati</p>
+        </a>
       </div>
     </div>
   </div>
@@ -30,6 +36,11 @@ import Arrow from "../../components/svg/Arrow"
 
   html {
     scroll-behavior: smooth;
+  }
+
+  .link {
+    color: black;
+    text-decoration: none;
   }
   
   .title {

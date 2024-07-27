@@ -1,8 +1,25 @@
 import "./Submenu.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Submenu = () => {
   const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path === "/projects") {
+      setActiveLink("projects");
+    } else if (path.includes("/projects/architecture")) {
+      setActiveLink("architecture");
+    } else if (path.includes("/projects/objects")) {
+      setActiveLink("objects");
+    } else if (path.includes("/projects/process")) {
+      setActiveLink("process");
+    } else if (path.includes("/projects/indices")) {
+      setActiveLink("indices");
+    } else {
+      setActiveLink("");
+    }
+  }, []);
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
