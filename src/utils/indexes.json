@@ -110,7 +110,7 @@
         "year": "2019",
         "index": "0015",
         "title": "AYACUCHO",
-        "type": "refurbisment",
+        "type": "refurbishment",
         "status": "built"
     },
     {
@@ -131,14 +131,14 @@
         "year": "2017",
         "index": "0006",
         "title": "SEGUÍ",
-        "type": "refurbisment",
+        "type": "refurbishment",
         "status": "built"
     },
     {
         "year": "2017",
         "index": "0005",
         "title": "67",
-        "type": "refurbisment",
+        "type": "refurbishment",
         "status": "unbuilt"
     },
     {

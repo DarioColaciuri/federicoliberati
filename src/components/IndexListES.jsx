@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import indexesData from '../utils/indexes.json';
+import indexesData from '../utils/indexesES.json';
 import "./IndexList.css"
 
 const IndexListES = () => {
