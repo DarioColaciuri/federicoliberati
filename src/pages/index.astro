@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Federico Liberati">
 	<div class="img-container">
-		<a href="/main">
+		<a class="img" href="/main">
 			<Image class='logo' src="/logoindex.png" alt="Federico-Liberati logo" width={160} height={160} />
 		</a>
 	</div>
@@ -17,6 +17,17 @@ import Layout from '../layouts/Layout.astro';
 		justify-content: center;
 		align-items: center;
 		height: 100dvh;
+		width: 100dvw;
+	}
+
+	.img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100dvh;
+		width: 100dvw;
+		z-index: 99;
+		cursor: url('/cursor.png'), auto;
 	}
 
 	@keyframes rotatecenter {
